@@ -7,6 +7,189 @@ main {
   -webkit-font-smoothing: antialiased;
 }
 
+.clear {
+  clear: both;
+}
+
+#content {
+  margin:0!important;
+}
+
+@media (min-width: 769px) {
+  #content {
+    padding-bottom: 30px!important;
+  }
+}
+
+.repayments {
+  width: 100%;
+  float: left;
+}
+
+.repayments ol {
+  padding-left: 2em;
+}
+
+@media screen and (max-width: 700px) {
+  .repayments article header.page-header h1 {
+    font-size: 24px;
+  }
+}
+
+#content strong {
+  font-weight: bold;
+}
+
+.repayments input {
+  margin-bottom:30px;
+}
+
+.repayments .form-steps ul, .repayments .form-steps li {
+  margin:0;
+  list-style: none;
+  padding-left:0;
+}
+
+.repayments .helper-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+    .repayments .helper-mobile {
+        display: block;
+        border-bottom: 1px solid #bfc1c3
+    }
+}
+.repayments .helper-mobile a {
+    display: block;
+    background-image: url("mobile-nav.png");
+    background-position: right 22px;
+    background-repeat: no-repeat;
+    font-size: 17px;
+    color: #2e3191;
+    text-decoration: none;
+    font-weight: 300;
+    padding: 1em 0;
+    line-height: 1em;
+    cursor: pointer
+}
+.repayments .helper-mobile a.open-helper {
+    background-position: right -25px
+}
+
+.repayments article {
+  background: #fff;
+  position: relative;
+  float: right;
+  width: 68%;
+}
+
+@media screen and (max-width: 700px) {
+    .repayments article {
+        float: none;
+        width: auto;
+    }
+}
+.repayments article.eligible .validation-summary {
+    margin-left: 0
+}
+.repayments article.error-statement p {
+    margin: 2em 0 0 0
+}
+.repayments article.multi-language p {
+    margin-top: 1em
+}
+.repayments article.multi-language h2 {
+    margin-top: 2em
+}
+.repayments article h1 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2em
+}
+@media screen and (max-width: 700px) {
+    .repayments article h1 {
+        font-size: 24px
+    }
+}
+
+.repayments .left-col {
+    float: left;
+    width: 26%;
+}
+@media screen and (max-width: 700px) {
+    .repayments .left-col {
+        float: none;
+        width: auto;
+        margin-top: 2em;
+        border-bottom: 1px solid #bfc1c3;
+        padding-bottom: 2em;
+        display: none
+    }
+}
+@media screen and (min-width: 700px) {
+    .repayments .left-col {
+        display: block !important
+    }
+}
+.repayments .left-col h1 {
+    color: #ccc;
+    font-size: 30px;
+    margin-bottom: 1em
+}
+.repayments .left-col h2 {
+    font-size: 24px
+}
+@media screen and (max-width: 700px) {
+    .repayments .left-col h2 {
+        font-size: 19px
+    }
+}
+.repayments .left-col h3 {
+    margin: 2.2em 0 .5em 0;
+    font-size: 19px
+}
+.repayments .left-col a {
+    display: inline-block
+}
+.repayments .left-col p {
+    margin: .75em 0 0 0
+}
+.repayments .left-col p.grouped {
+    margin-top: 0
+}
+.repayments .left-col ul {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+.repayments .left-col ul li {
+    margin: 10px 0 0 0
+}
+.repayments .left-col.no-employment {
+    float: right;
+    width: 68%;
+    clear: both;
+    margin-top: 2em;
+    display: block
+}
+.repayments .left-col.no-employment li,
+.repayments .left-col.no-employment p {
+    font-size: 19px
+}
+.repayments .left-col.no-employment li {
+    list-style: disc;
+    margin-left: 1.2em
+}
+@media screen and (max-width: 700px) {
+    .repayments .left-col.no-employment {
+        float: none;
+        width: auto;
+        padding-top: 2em;
+        margin-top: 2em
+    }
+}
+
 .phase-banner-alpha {
   padding: 10px 0 8px 0;
   border-bottom: 1px solid #bfc1c3; }
@@ -108,3 +291,28 @@ main {
       .phase-banner-beta span {
         width: auto;
         vertical-align: baseline; } }
+
+form input[type="text"] {
+  margin-left: 0;
+}
+
+.panel-indent {
+  clear: both;
+  border-left: 4px solid #bfc1c3;
+  padding: 10px 0 10px 15px;
+  margin: 30px 15px 45px 0;
+}
+
+@media (min-width: 641px) {
+  #content.multi-page aside {
+    margin: 0 0 2.5em;
+  }
+}
+
+#content.multi-page aside {
+  z-index: 10;
+  border-bottom: 1px solid #bbb;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  overflow: hidden;
+}
