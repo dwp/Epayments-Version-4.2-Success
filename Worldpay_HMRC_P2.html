@@ -43,10 +43,15 @@ table tr td.error span {
 }
 
 form {
-	float: left;
 	padding:15px;
 	border:1px solid #bbb;
-	margin-top: 30px;
+  margin: 30px auto 0;
+}
+
+@media(min-width: 768px) {
+  form {
+    max-width: 75%;
+  }
 }
 
 input#op-DPCancel {
@@ -89,6 +94,10 @@ label[for="op-DPCancel"] span b {
 	#print_buttons tr{display:none;}
 	div.print_buttons {display:none;}
 	img.print_buttons {display:none;}
+}
+
+table {
+  width: 100%;
 }
 
 </style>
@@ -161,7 +170,7 @@ label[for="op-DPCancel"] span b {
       <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
     </p>
   </div>
-  <div class="repayments">  
+  <div class="repayments form">  
 <script type="text/javascript"> 
 var v1 = parent.document.URL.substring(parent.document.URL.indexOf('?'), parent.document.URL.length);   
 var qsParm = new Array();
@@ -191,13 +200,7 @@ location.href = "./OverpaymentSuccess_GOV.html?refID="+refVal+"&Amount="+amt;
 }
 </script>
 <form action="javascript:completeAndRedirect();" method=post autocomplete=off>
-<div>
-  <p align="center" >
-              <strong style="background-color:#d53880">ALPHA</strong>
-              <span>This is a new service – your feedback will help us to improve it.</span>
-            </p>
-    </div>  
-    <br/>
+
 <table class="container" cellpadding="0" cellspacing="0" align="center">
     <tr>
         <td>

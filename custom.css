@@ -41,7 +41,120 @@ main {
 }
 
 .repayments input {
-  margin-bottom:30px;
+  margin:30px 0;
+}
+
+.repayments form {
+  margin-left:auto;
+  margin-right:auto;
+  word-break: break-word;
+}
+
+.repayments form br:first-child {
+  display: none;
+}
+
+.repayments.form input, .repayments.form select {
+  margin:15px 0;
+}
+
+.repayments.form input[type="text"], .repayments.form input[type="email"] {
+  width:150px;
+}
+
+.containercell > tr {width:300px;}
+
+.repayments.form select {
+    max-width: 150px;
+  }
+
+.repayments.form label {
+  padding-right: 15px;
+  float: left;
+  word-break: initial;
+} 
+
+@media screen and (min-width: 500px) {
+  .repayments.form input[type="text"], .repayments.form input[type="email"] {
+    min-width:270px;
+  }
+  .repayments.form select {
+    max-width: 100%;
+  }
+  .repayments.form label {
+    padding-right: 20px;
+  }
+}
+
+.repayments.form input#cardCVV {
+  max-width:120px;
+}
+
+.repayments.form tr td:before, .repayments.form tr td:after {
+  visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+}
+
+.repayments label.form-label + input, .repayments input.text {
+  margin-top: 0;
+}
+
+.repayments.form span {
+  padding:15px 0;
+  float: left;
+}
+
+.repayments.form label[for="op-PMMakePayment"] {
+  padding:15px 20px;
+  float: left;
+  background-color: #00823b;
+  position: relative;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.3em 0.6em 0.2em 0.6em;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0 2px 0 #003518;
+  -moz-box-shadow: 0 2px 0 #003518;
+  box-shadow: 0 2px 0 #003518;
+  font-size: 1em;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: #fff;
+  margin: 0 15px 15px 0;
+  padding: 0.52632em 0.78947em 0.26316em 0.78947em;
+  vertical-align: top;
+}
+
+.repayments.form label[for="op-PMMakePayment"]:hover, .repayments.form label[for="op-PMMakePayment"]:focus {
+  background-color: #00692f;
+}
+
+.repayments.form label[for="op-PMMakePayment"] input {
+  display: none;
+}
+
+.repayments.form label[for="op-PMMakePayment"] span b {
+  color: #fff;
+}
+
+.repayments.form input[type="email"] {
+  font-family: "nta",Arial,sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  border: 1px solid #bbb;
+  padding: 0.25em;
 }
 
 .repayments .form-steps ul, .repayments .form-steps li {
@@ -315,4 +428,9 @@ form input[type="text"] {
   margin-bottom: 1em;
   padding-bottom: 1em;
   overflow: hidden;
+}
+
+.complete tr, .complete tr td {
+  border:0;
+  font-size: 19px;
 }
