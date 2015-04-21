@@ -37,6 +37,12 @@ table tr td.error span {
 	float: left;
 }
 
+@media (max-width: 767px) {
+	.cardlabel td span {
+		font-size: 12px!important;
+	}
+}
+
 .cardlabel table {
 	margin-left: auto;
 	margin-right: auto;
@@ -69,9 +75,11 @@ form {
 	margin-top: 30px;
 }
 
-form h1 {
-	font-size: 32px;
-	line-height: 1em;
+@media(max-width: 767px) {
+  form h1 {
+    font-size: 32px;
+    line-height: 1em;
+  }
 }
 
 input#op-DPCancel {
@@ -88,7 +96,7 @@ label[for="op-DPCancel"] {
 	margin: 0 auto 20px;
 	cursor: pointer;
 	text-align: center;
-	width:80%;
+	width:30%;
 }
 
 @media (min-width: 769px) {
@@ -320,7 +328,7 @@ document.write(refVal);
 			<td class="one width190" align="left" valign="top"><span style=" font-family: Verdana,Geneva,Arial,Helvetica,Sans-Serif; font-size: 10pt; color: #002469;"><b>GBP <script type="text/javascript">
 document.write(amt);
 
-</script>NaN</b></span></td>
+</script></b></span></td>
 		</tr>
 	
 

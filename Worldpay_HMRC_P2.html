@@ -43,9 +43,18 @@ table tr td.error span {
 }
 
 form {
-	padding:15px;
-	border:1px solid #bbb;
   margin: 30px auto 0;
+}
+
+form > table {
+  display: block;
+}
+
+@media(max-width: 767px) {
+  form h1 {
+    font-size: 32px;
+    line-height: 1em;
+  }
 }
 
 @media(min-width: 768px) {
@@ -71,6 +80,40 @@ label[for="op-DPCancel"] {
 
 label[for="op-DPCancel"] span b {
 	color: #fff;
+}
+
+.containercell tr + input + tr + tr td table tr {
+  border-bottom: 1px solid #bfc1c3;
+  float: left;
+  width: 100%;
+  clear: both;
+  height: auto;
+}
+
+.containercell tr + input + tr + tr td table tr + tr img {
+  float: left;
+  margin: 7px 15px;
+  display: none;
+}
+
+.containercell tr + input + tr + tr td table tr td {
+  float: left;
+}
+
+.containercell tr + input + tr + tr td table tr td:first-child {
+  min-width:160px;
+}
+
+@media (min-width: 641px) {
+  .containercell tr + input + tr + tr td table tr td:first-child {
+    min-width:200px;
+  }
+  .containercell tr + input + tr + tr td table tr + tr img {
+    display: block;
+  }
+  .containercell tr + input + tr + tr td table tr {
+    height:53px;
+  }
 }
 
 @media print {
@@ -99,6 +142,7 @@ label[for="op-DPCancel"] span b {
 table {
   width: 100%;
 }
+
 
 </style>
 <script type="text/javascript">      (function(){if(navigator.userAgent.match(/IEMobile\/10\.0/)){var d=document,c="appendChild",a=d.createElement("style");a[c](d.createTextNode("@-ms-viewport{width:auto!important}"));d.getElementsByTagName("head")[0][c](a);}})();    </script>
