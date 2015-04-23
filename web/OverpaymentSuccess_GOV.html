@@ -37,6 +37,7 @@
 <!--[if IE 6]><link href="https://assets.digital.cabinet-office.gov.uk/frontend/application-ie6-a34832352e383884edc89454b7e29b04.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><!--[if IE 7]><link href="https://assets.digital.cabinet-office.gov.uk/frontend/application-ie7-7f2f952f522ba46f674b44af0a98a067.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><!--[if IE 8]><link href="https://assets.digital.cabinet-office.gov.uk/frontend/application-ie8-76ab79c4381c45c614f886802ec6578c.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
 <link href="custom.css" rel="stylesheet" type="text/css">
 <link href="public/stylesheets/elements.css" rel="stylesheet" type="text/css">
+<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body class="mainstream">
     <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><div id="skiplink-container">
@@ -55,9 +56,16 @@
               <img src="https://assets.digital.cabinet-office.gov.uk/static/gov.uk_logotype_crown-c09acb07e4d1d5d558f5a0bc53e9e36d.png" width="35" height="31" alt=""> GOV.UK
             </a>
           </div>
-          
+          <div class="header-proposition">
+            <div class="content">
+              <nav id="proposition-menu">
+                <a href="start.htm" id="proposition-name">Benefit Debt Repayment</a>
+              </nav>
+            </div>
+          </div>
 
         </div>
+          
         
       </div>
 	  
@@ -114,19 +122,24 @@ win.focus();
 	<!--&nbsp;&nbsp;<p style="font-size:35px"> <Strong>Make a Benefit Overpayment Online</Strong></p>-->
     </div>
   </header>
-
-   <table border="0">
-  <tr><td> <h2>Your Payment for <img src="./pound1.gif" alt="PoundSign" height ="17" align ="bottom"><script type="text/javascript">
-document.write(amt);</script> has been processed successfully. </h2></td></tr>
-    <tr><td> <h3> Transaction ID :43236WPGV</td></h3></tr>
-	<tr><td> <h3> Transaction Date :<strong><span id="time"></span>
-        </strong>  </td></h3></tr>
-	<tr><td> <h3> Reference : <script type="text/javascript">
-document.write(refVal);</script>
- </td> </h3></tr>
-	<tr><td> <h3> If you have entered an email address on the payment screen you will receive a confirmation shortly.</td> </h3></tr>
-	<tr><td> <h3> Please print this for your future reference. </td></h3></tr>
-</table>
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="reference-number-wrap highlighted">
+              <h1 class="heading-medium"><i class="icon-ok"></i> <span>Your Payment for &pound;<script type="text/javascript">
+    document.write(amt);</script> has been processed successfully.</span></h1>
+              <div class="pre-title">Transaction ID :43236WPGV</div>
+              <div class="pre-title">Transaction Date :<strong><span id="time"></span></strong></div>
+              <div class="pre-title">Reference : 
+                <script type="text/javascript">document.write(refVal);</script>
+              </div>
+          </div>
+       
+      </div>
+      <div class="clear">
+        <h2 class="heading-medium">What happens next</h2>
+        <p>Pellentesque consequat tellus sit amet purus pharetra, sed vulputate magna scelerisque. Nulla ut risus augue. Nunc vel convallis velit, nec scelerisque metus.</p>
+      </div>
+    </div>
   </div>
   <br/>
   <script language="javascript">
