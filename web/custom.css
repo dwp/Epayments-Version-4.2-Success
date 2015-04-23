@@ -470,3 +470,8 @@ aside .page-navigation-open {
     padding: 0em 1em 0.75em 0.5em;
   }
 }
+
+#global-header .header-proposition #proposition-name {
+  display: inline-block;
+  margin-top: 7px;
+}
