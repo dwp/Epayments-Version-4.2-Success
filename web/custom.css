@@ -517,3 +517,7 @@ aside .page-navigation-open {
     overflow-x: auto;
     display: block;
   }
+
+  #global-header .header-proposition #proposition-menu {
+    margin-top: 0;
+  }
