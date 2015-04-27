@@ -1,5 +1,5 @@
 <?php
-header('Location: /start.htm');
+header('Location: /start.php');
 /*
 require('../vendor/autoload.php');
 
