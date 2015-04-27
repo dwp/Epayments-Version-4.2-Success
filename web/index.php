@@ -1,5 +1,5 @@
 <?php
-/*header('Location: /start.htm');*/
+/*header('Location: /start.htm');
 
 require('../vendor/autoload.php');
 
@@ -19,7 +19,7 @@ $app->get('/', function() use($app) {
 });
 
 $app->run();
-
+*/
 ?>
 <!DOCTYPE html>
 <html>
@@ -129,7 +129,8 @@ table {
 </head>
 <body>
 <?php 
-global $password;
+$password = getenv('password');
+echo $password.'ffff';
 if (!empty($_POST)) {
 	$psw = $_GET['psw'];
 	if($psw ==$password) {
@@ -150,6 +151,8 @@ else {
 <button type="submit" value="Continue">Continue</button>
 </form>
 </div>
-</div>';?>
+</div>';
+}
+?>
 </body>
 </html>
