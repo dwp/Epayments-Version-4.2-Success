@@ -132,8 +132,7 @@ table {
 $password = getenv('password');
 if (!empty($_POST)) {
 	$psw = $_GET['psw'];
-	if($psw = '1234') {
-		session_start();
+	if($psw = $password) {
 		header('location: /start.php');
 	}
 	else {
