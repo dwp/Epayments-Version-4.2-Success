@@ -1,6 +1,6 @@
 <?php
-header('Location: /start.htm');
-/*
+/*header('Location: /start.htm');*/
+
 require('../vendor/autoload.php');
 
 $app = new Silex\Application();
@@ -19,5 +19,15 @@ $app->get('/', function() use($app) {
 });
 
 $app->run();
-*/
+
+USERS = { "user" => "secret" }
+
+before_filter :authenticate
+
+def authenticate
+  authenticate_or_request_with_http_digest("Application") do |name|
+    USERS[name]
+  end
+end
+
 ?>
