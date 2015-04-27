@@ -1,4 +1,9 @@
 
+<?php 
+if((!isset($_SESSION)) {
+  header('location: /index.php');
+}
+?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <!-- layout.templ $Revision$ -->
 <html lang="en">

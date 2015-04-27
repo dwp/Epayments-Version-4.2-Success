@@ -136,6 +136,9 @@ if (!empty($_POST)) {
 		session_start();
 		header('location: /start.php');
 	}
+	else {
+		echo '<div class="content"><div><p style="text-align:center; color:red;">Incorrect password.</p><p style="text-align:center;""><a href="/">Try again</a></p></div></div>';
+	}
 }
 else {
 	echo '
