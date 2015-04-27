@@ -129,6 +129,7 @@ table {
 </head>
 <body>
 <?php 
+echo'ddddd';
 $password = getenv('password');
 if (!empty($_POST)) {
 	$psw = $_GET['psw'];
