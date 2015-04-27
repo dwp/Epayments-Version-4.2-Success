@@ -129,13 +129,11 @@ table {
 </head>
 <body>
 <?php 
-//$password = getenv('password');
-
-if ((!empty($_POST))&&(($_GET['psw']) != '')) {
+$password = getenv('password');
+if (!empty($_POST)) {
 	$psw = $_GET['psw'];
 	if($psw = '1234') {
 		session_start();
-		$_SESSION['access'];
 		header('location: /start.php');
 	}
 	else {
@@ -151,7 +149,7 @@ else {
 <p>Enter your password to access the prototype.</p>
 <form method="post" action="'.($_SERVER['PHP_SELF']).'">
 <label for="psw">Password:</label>
-<input type="password" id="psw" name="psw" required>
+<input type="password" id="psw" name="psw">
 <button type="submit" value="Continue">Continue</button>
 </form>
 </div>
