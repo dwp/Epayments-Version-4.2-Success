@@ -133,7 +133,7 @@ $password = getenv('password');
 echo $password.'ffff';
 if (!empty($_POST)) {
 	$psw = $_GET['psw'];
-	if($psw ==$password) {
+	if($psw = $password) {
 		session_start();
 		header('location: /start.php');
 	}
