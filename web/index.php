@@ -128,12 +128,12 @@ table {
 
 </head>
 <body>
-<?php 
-echo'ddddd';
+<?php
 $password = getenv('password');
 echo $password;
 if (!empty($_POST)) {
 	$psw = $_GET['psw'];
+	echo $psw;
 	if (!empty($psw)) {
 		if($psw = $password) {
 			header('location: /start.php');
