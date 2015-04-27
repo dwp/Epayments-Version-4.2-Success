@@ -1,8 +1,8 @@
-
 <?php 
-if((!isset($_SESSION)) {
-  header('location: /index.php');
+if(!isset($_COOKIE['accessCookie'])) {
+  die();
 }
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <!-- layout.templ $Revision$ -->

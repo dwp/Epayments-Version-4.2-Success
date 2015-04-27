@@ -20,6 +20,40 @@ $app->get('/', function() use($app) {
 
 $app->run();
 */
+if(isset($_COOKIE['accessCookie'])) {
+  header('Location: /start.php');
+}
+$password = getenv('password');
+if (!empty($_POST)) {
+	$psw = $_POST['psw'];
+	if ($psw != '') {
+		if ($psw != $password) {
+			$msg = '<div class="content"><div><p style="text-align:center; color:red;">Incorrect password.</p><p style="text-align:center;"><a href="/">Try again</a></p></div></div>';
+		}
+		else {
+			setcookie("accessCookie", 'access', time()+3600*24);
+			header('Location: /start.php');
+		}
+	}
+	else {
+		$msg = '<div class="content"><div><p style="text-align:center; color:red;">Please enter a password.</p><p style="text-align:center;"><a href="/">Try again</a></p></div></div>';
+	}
+}
+
+else {
+	$msg = '
+	<div class="content">
+		<div>
+			<h1>Please login</h1>
+			<p>Enter your password to access the prototype.</p>
+			<form method="post" action="'.($_SERVER['PHP_SELF']).'">
+				<label for="psw">Password:</label>
+				<input type="password" id="psw" name="psw">
+				<button type="submit" value="Continue">Continue</button>
+			</form>
+		</div>
+	</div>';
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -56,6 +90,7 @@ $app->run();
 
 			p {
 				font-size: 100%;
+				margin-bottom: 10px;
 			}
 
 			label, input, p {
@@ -98,6 +133,7 @@ $app->run();
 				color: #fff;
 				margin:10px auto;
 				display: block;
+				clear: both;
 			}
 	}
 /* HTML5 display-role reset for older browsers */
@@ -128,40 +164,6 @@ table {
 
 </head>
 <body>
-<?php
-$password = getenv('password');
-echo $password;
-if (!empty($_POST)) {
-	$psw = $_POST['psw'];
-	echo $psw;
-	if (!empty($psw)) {
-		if($psw = $password) {
-			header('location: /start.php');
-		}
-		else {
-			echo '<div class="content"><div><p style="text-align:center; color:red;">Incorrect password.</p><p style="text-align:center;"><a href="/">Try again</a></p></div></div>';
-		}
-	}
-	else {
-			echo '<div class="content"><div><p style="text-align:center; color:red;">Incorrect password.</p><p style="text-align:center;"><a href="/">Try again</a></p></div></div>';
-		}
-}
-	else {
-		echo '
-
-	<div class="content">
-	<div>
-	<h1>Please login</h1>
-	<p>Enter your password to access the prototype.</p>
-	<form method="post" action="'.($_SERVER['PHP_SELF']).'">
-	<label for="psw">Password:</label>
-	<input type="password" id="psw" name="psw">
-	<button type="submit" value="Continue">Continue</button>
-	</form>
-	</div>
-	</div>';
-	}
-
-?>
+<?php echo $msg; ?>
 </body>
 </html>
