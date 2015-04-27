@@ -134,28 +134,34 @@ $password = getenv('password');
 echo $password;
 if (!empty($_POST)) {
 	$psw = $_GET['psw'];
-	if($psw = $password) {
-		header('location: /start.php');
+	if (!empty($psw)) {
+		if($psw = $password) {
+			header('location: /start.php');
+		}
+		else {
+			echo '<div class="content"><div><p style="text-align:center; color:red;">Incorrect password.</p><p style="text-align:center;"><a href="/">Try again</a></p></div></div>';
+		}
 	}
 	else {
-		echo '<div class="content"><div><p style="text-align:center; color:red;">Incorrect password.</p><p style="text-align:center;"><a href="/">Try again</a></p></div></div>';
-	}
+			echo '<div class="content"><div><p style="text-align:center; color:red;">Incorrect password.</p><p style="text-align:center;"><a href="/">Try again</a></p></div></div>';
+		}
 }
-else {
-	echo '
+	else {
+		echo '
 
-<div class="content">
-<div>
-<h1>Please login</h1>
-<p>Enter your password to access the prototype.</p>
-<form method="post" action="'.($_SERVER['PHP_SELF']).'">
-<label for="psw">Password:</label>
-<input type="password" id="psw" name="psw">
-<button type="submit" value="Continue">Continue</button>
-</form>
-</div>
-</div>';
-}
+	<div class="content">
+	<div>
+	<h1>Please login</h1>
+	<p>Enter your password to access the prototype.</p>
+	<form method="post" action="'.($_SERVER['PHP_SELF']).'">
+	<label for="psw">Password:</label>
+	<input type="password" id="psw" name="psw">
+	<button type="submit" value="Continue">Continue</button>
+	</form>
+	</div>
+	</div>';
+	}
+
 ?>
 </body>
 </html>

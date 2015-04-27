@@ -1,8 +1,8 @@
 ﻿
 <?php 
-if((!isset($_SESSION)) {
-  header('location: /index.php');
-}
+//if((!isset($_SESSION)) {
+  //header('location: /index.php');
+//}
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="lte-ie8" lang="en"><![endif]--><!--[if gt IE 8]><!--><html lang="en">
