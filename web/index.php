@@ -132,7 +132,7 @@ table {
 $password = getenv('password');
 echo $password;
 if (!empty($_POST)) {
-	$psw = $_GET['psw'];
+	$psw = $_POST['psw'];
 	echo $psw;
 	if (!empty($psw)) {
 		if($psw = $password) {
