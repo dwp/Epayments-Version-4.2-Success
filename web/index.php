@@ -20,14 +20,17 @@ $app->get('/', function() use($app) {
 
 $app->run();
 
-USERS = { "user" => "secret" }
+class ApplicationController < ActionController::Base
+  before_filter :check_redirect_key
 
-before_filter :authenticate
-
-def authenticate
-  authenticate_or_request_with_http_digest("Application") do |name|
-    USERS[name]
+  def check_redirect_key
+    if request[:access_key] != 'random_string' && cookies[:access_key] != 'random_string'
+      redirect_to "/404.html" 
+    elsif request[:access_key] == 'random_string'
+      cookies.permanent[:access_key] = 'random_string'
+    end
   end
+
 end
 
 ?>
