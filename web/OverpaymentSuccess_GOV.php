@@ -65,7 +65,7 @@ if(!isset($_COOKIE['accessCookie'])) {
           <div class="header-proposition">
             <div class="content">
               <nav id="proposition-menu">
-                <a href="start.php" id="proposition-name">Benefit Debt Repayment</a>
+                <a href="start.php" id="proposition-name">Benefit debt repayment</a>
               </nav>
             </div>
           </div>

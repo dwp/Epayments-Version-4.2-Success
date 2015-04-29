@@ -70,7 +70,7 @@ if(!isset($_COOKIE['accessCookie'])) {
           <div class="header-proposition">
             <div class="content">
               <nav id="proposition-menu">
-                <a href="start.php" id="proposition-name">Benefit Debt Repayment</a>
+                <a href="start.php" id="proposition-name">Benefit debt repayment</a>
               </nav>
             </div>
           </div>
@@ -110,30 +110,25 @@ if(!isset($_COOKIE['accessCookie'])) {
 <aside class="left-col" role="complementary">
   <section id="help" aria-labelledby="helpcontent">
         
-    <h3><strong>Helpline 0345 850 0293</strong></h3>
-    <p>Monday to Friday: 8am - 8pm <br>Saturday: 9am - 4pm</p>
+    <!--<h3><strong>Helpline 0345 850 0293</strong></h3>-->
+    <p style="margin-top:40px;">Don't use this service if you can't repay the full amount you owe - telephone <br>0345 850 0293 to arrange paying in instalments.</p>
     <p><a href="https://www.gov.uk/call-charges" target="_blank" onmousedown="trackEvent('/allowance/benefits','Call charges');" onkeydown="trackEvent('/allowance/benefits','Call charges');">Find out about call charges</a></p>
 
   </section>
 
 </aside>
  <article>
-  <header class="page-header group">
-    <div>
-	     <h1>Your payment details</h1>
-    </div>
-  </header>
   <div>
-  <form action="javascript:completeAndRedirect();" method="post" autocomplete="off" >
+  <form action="javascript:completeAndRedirect();" method="post" autocomplete="off" style="margin-top:40px;">
     <label class="form-label" for="ni-number">
     National Insurance number
-    <span class="form-hint">For example, JH 21 90 80A.</span>
+    <span class="form-hint">For example, QQ 12 34 56C.</span>
   </label>
   <input style="text-transform: uppercase" pattern="[A-Za-z]{2}[0-9]{6}[ABCDabcd]{1}" oninvalid="setCustomValidity('Please enter a valid reference')"
     onchange="try{setCustomValidity('')}catch(e){}"  maxlength="10" name="ni-number"  id="ni-number" type="text" class="text form-control" value="" />
   
 
-<label class="form-label" for="amount-number">Amount To Pay
+<label class="form-label" for="amount-number">Amount you want to pay
 </label>
 <span class="poundsign">&pound;</span>
 <input type="text" style="text-transform: uppercase" pattern="[0-9]+(\.[0-9]{1,2})?|\.[0-9]{2}" maxlength="8" oninvalid="setCustomValidity('Please enter a valid amount')" onchange="try{setCustomValidity('')}catch(e){}" name="amount-number" id="amount-number" class="text" value="" align="top">

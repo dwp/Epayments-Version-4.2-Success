@@ -84,7 +84,7 @@ if(!isset($_COOKIE['accessCookie'])) {
       <ol role="breadcrumbs" class="group">
 <li><a href="#">Home</a></li>
       <li><a href="#">Benefits</a></li>
-<li><strong><a href="#">Repay by card online</a></strong></li>
+<li><strong><a href="#">Repay Department for Work &amp; Pensions</a></strong></li>
 </ol>
 </div>
         <div id="top-links" class="inner-block">
@@ -101,7 +101,7 @@ if(!isset($_COOKIE['accessCookie'])) {
  <article>
    <header class="page-header group">
   <div>
-     <h1>Repay by card online</h1>
+     <h1>Repay Department for Work &amp; Pensions</h1>
   </div>
   </header>
 
@@ -111,79 +111,23 @@ if(!isset($_COOKIE['accessCookie'])) {
     <div class="content-block">
       <div class="inner">
         
-  <aside>
-  <div class="inner">
-
-    <nav role="navigation" class="page-navigation page-navigation-closed" aria-label="parts to this guide">
-    <ol>
-        <li>
-            <span class="part-number">1.</span>
-            <a href="#">Overview</a>
-          </li>
-          <li>
-            <span class="part-number">2.</span>
-            <a href="#">When repayments have to be made</a>
-          </li>
-          <li class="active">
-            <span class="part-number">3.</span>
-            Repay by card online
-          </li>
-    </ol>
-    <ol start="4">
-          <li>
-            <span class="part-number">4.</span>
-            <a href="/carers-allowance/how-to-claim">Make repayment?</a>
-          </li>
-          <li>
-            <span class="part-number">5.</span>
-            <a href="/carers-allowance/further-information">Other ways to pay</a>
-          </li>
-    </ol>
-  </nav>
-</div>
-</aside>
-<p class="clear"><strong>You can repay an overpayment by debit card or credit card.</strong></p>
+<p class="clear">
+Repay an overpayment from the Department for Work & Pensions with a debit or credit card.</p>
 <div class="panel-indent">
-  <p>Paying by credit card may be more expensive etc</p>
+  <p>There's a small additional fee if you use a credit card.</p>
 </div>
-<p>Use the reference number (your National Insurance Number) on the letter we have sent you etc.</p>
-<p>Only use this service if you are paying the repayment in full - if you cannot make a full repayment contact us etc.</p>
+<p>You'll need your National Insurance number to use the service.</p>
 
-    <strong>To repay online you'll need:</strong>
+    <div>To repay online you'll need:</div>
       <ul class="list-bullet">
-  <li>Your repayment letter DWP Debt Management (LBA)</li>
-  <li>Your reference number: this is the National Insurance Number on the letter</li>
-  <li>The amount owed</li>
-   <li>Email address etc for receipt</li>
+  <li>the amount owed</li>
+   <li>email address</li>
 </ul>
       <div class="transaction">
         <p class="get-started group">
           <a class="button" href="Overpayments4.php">Start now</a>
         </p>
         </div>
-      <h2>Other ways to apply</h2>
-      <p>Aliquam tempor tellus id auctor sodales. Aliquam non nisl erat. Aenean quis magna scelerisque, vulputate lectus eu, porta orci. Maecenas et felis ut libero blandit luctus. Vestibulum a pharetra mi.</p>
-      <p><strong>Please call us to discuss how you can pay your overpayments</strong></p>
-      <p><strong>Helpline 0345 850 0293</strong></p>
-      <p>Monday to Friday: 8am - 8pm <br>Saturday: 9am - 4pm</p>
-      <p><a href="https://www.gov.uk/call-charges" target="_blank" onmousedown="trackEvent('/allowance/benefits','Call charges');" onkeydown="trackEvent('/allowance/benefits','Call charges');">Find out about call charges</a></p>
-
-
-
-  <footer><nav class="pagination" role="navigation" aria-label="Pagination">
-  <ul class="group">
-  <li class="previous">
-            <a href="#" rel="prev" title="Navigate to previous part">
-              <span class="pagination-label">Previous </span> <span class="pagination-part-title">When repayments have to be made</span>
-          </a>          
-</li>
-      <li class="next">
-        <a href="#" rel="next" title="Navigate to next part">
-          <span class="pagination-label">Next</span> <span class="pagination-part-title">Make repayment?</span>
-      </a>          
-      </li>
-    </ul>
-    </nav></footer><div class="print-link"><a href="/carers-allowance/print" rel="nofollow" target="_blank">Print entire guide</a></div>
 
       </div>
     </div>
