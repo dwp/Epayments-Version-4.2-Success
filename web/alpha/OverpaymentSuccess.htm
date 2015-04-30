@@ -1,0 +1,63 @@
+ <header role="banner" id="global-header" class=""><div class="header-wrapper">
+        <div class="header-global">
+          <div class="header-logo">
+            <a href="https://www.worldpay.com/" title="Go to the Worldpay homepage" id="logo" class="content">
+              <img src="./worldpay.gif" width="85" height="35" alt=""> 
+            </a>
+          </div>
+           
+
+        </div>
+        
+      </div>
+    </header>
+<br/>
+
+<div id="wrapper" class="transaction service">
+      
+<main id="content" role="main" class="group"><header class="page-header group"><div>
+   <!-- <table>  
+	<tr><td> <h2>&nbsp;&nbsp;&nbsp;Successful Payment </h2></td></tr>
+	</table>-->
+    </div>
+  </header>
+  <br/>
+  <div>
+   <table border="0">
+  <tr><td> <h2>&nbsp;&nbsp;&nbsp;Your Payment for <img src="./pound1.gif" alt="PoundSign" height ="17" align ="bottom">500.00 has been processed successfully </h2></td></tr>
+    <tr><td> <h3>&nbsp;&nbsp;&nbsp; Transaction ID :43236WPGV</td></h3></tr>
+	<tr><td> <h3>&nbsp;&nbsp;&nbsp; Transaction Date :<strong><span id="time"></span>
+        </strong>  </td></h3></tr>
+	<tr><td> <h3>&nbsp;&nbsp;&nbsp; Reference : AAA123456789AAA </td> </h3></tr>
+	<tr><td> <h3>&nbsp;&nbsp;&nbsp; If you have entered an email address on the payment screen you will receive a confirmation shortly.</td> </h3></tr>
+	<tr><td> <h3>&nbsp;&nbsp;&nbsp; Please print this for your future reference. </td></h3></tr>
+</table>
+  </div>
+  <br/>
+  <script language="javascript">
+var today = new Date();
+var timestamp = today.toUTCString();
+document.getElementById('time').innerHTML=timestamp;
+</script>
+  <div>
+  <table style="width:50%">
+ <tr> <td></td>
+  </tr>
+ 
+  </table>
+  </div>
+  <br/>
+  <br/>
+      <footer class="group js-footer" id="footer" role="contentinfo" style="align:bottom">
+	  <div>
+	  <table width="0">
+	   <tr>
+	  <form action="./Overpayments_welcome.htm" method="post" autocomplete="off" novalidate="novalidate">
+        <td><input type="submit" name="continue" id="booking-login" value="Return to GOV.UK" class="button cta" /></td>
+		  <td>&nbsp; &nbsp;&nbsp;&nbsp;</td>
+		 <td> <a href="#" onClick="window.open('./OverpaymentsReceipt.htm', '_blank')"><input type="button" name="continue" onClick="./Overpayments_welcome.htm" value="Print Receipt"  /></a></td>
+       </form>
+      </table>
+	  </div>
+	  </footer>
+ 

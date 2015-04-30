@@ -1,0 +1,34 @@
+Master Card:5555555555554444
+CVV :555
+Date any: 05/15
+
+JCB:3528000700000000
+
+VISA:4444333322221111, 4911830000000 and 4917610000000000
+
+Maestro:6759649826438453
+
+111 NOT SENT TO ACQUIRER
+222 NO RESPONSE FROM ACQUIRER
+333 NOT CHECKED BY ACQUIRER
+444 FAILED
+555 APPROVED
+
+
+Test URL:
+
+https://secure.worldpay.com/jsp/shopper/SelectPaymentMethod.jsp?orderKey=MYMERCH
+ANT^T0211010&country=GB&language=en&successURL=http%3A%2F%2Fwww.webshops.int.com
+%2Fsuccess.asp&failureURL=http%3A%2F%2Fwww.webshops.int%2Ffailure.php&pendingURL
+=http%3A%2F%2Fwww.webshops.int%2Fpending.html&cancelURL=http%3A%2F%2Fwww.webshop
+s.int%2Fcancel.html&preferredPaymentMethod=VISA-SSL
+
+&successURL=http%3A%2F%2Fwww.gov.uk
+&failureURL=http%3A%2F%2Fwww.gov.uk
+
+Totest
+https://secure-test.worldpay.com/wcc/dispatcher?OrderKey=DWPECOM%5EBS339944C%2F160302015%2FABC0.15978823646771478&successURL=http%3A%2F%2Fwww.gov.uk
+
+https://secure-test.worldpay.com/wcc/dispatcher?OrderKey=DWPECOM%5EAD339146C%2F120022015%2FABC0.3046156042289254&successURL=http%3A%2F%2Fwww.gov.uk
+
+https://secure-test.worldpay.com/wcc/dispatcher?OrderKey=DWPECOM%5EAD339146C%2F120502015%2FABC0.3685728795228863&successURL=http%3A%2F%2Fwww.gov.uk

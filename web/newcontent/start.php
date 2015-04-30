@@ -1,7 +1,9 @@
 ﻿<?php 
+ob_start();
 if(!isset($_COOKIE['accessCookie'])) {
-  die();
+  header('location: /');
 }
+ob_end_flush();
 
 ?>
 <!DOCTYPE html>
@@ -41,8 +43,8 @@ if(!isset($_COOKIE['accessCookie'])) {
 <!--<![endif]--><link rel="canonical" href="/">
 <meta name="description" content="GOV.UK - The place to find government services and information - Simpler, clearer, faster">
 <!--[if IE 6]><link href="https://assets.digital.cabinet-office.gov.uk/frontend/application-ie6-a34832352e383884edc89454b7e29b04.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><!--[if IE 7]><link href="https://assets.digital.cabinet-office.gov.uk/frontend/application-ie7-7f2f952f522ba46f674b44af0a98a067.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><!--[if IE 8]><link href="https://assets.digital.cabinet-office.gov.uk/frontend/application-ie8-76ab79c4381c45c614f886802ec6578c.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
-<link href="custom.css" rel="stylesheet" type="text/css">
-<link href="public/stylesheets/elements.css" rel="stylesheet" type="text/css">
+<link href="/custom.css" rel="stylesheet" type="text/css">
+<link href="/public/stylesheets/elements.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mainstream">
     <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><div id="skiplink-container">

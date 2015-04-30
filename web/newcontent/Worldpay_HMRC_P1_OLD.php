@@ -1,7 +1,9 @@
 <?php 
+ob_start();
 if(!isset($_COOKIE['accessCookie'])) {
-  die();
+  header('location: /');
 }
+ob_end_flush();
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
@@ -125,7 +127,7 @@ img.printonly {display:none;}
 <!--<![endif]--><link rel="canonical" href="/">
 <meta name="description" content="GOV.UK - The place to find government services and information - Simpler, clearer, faster">
 <!--[if IE 6]><link href="https://assets.digital.cabinet-office.gov.uk/frontend/application-ie6-a34832352e383884edc89454b7e29b04.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><!--[if IE 7]><link href="https://assets.digital.cabinet-office.gov.uk/frontend/application-ie7-7f2f952f522ba46f674b44af0a98a067.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><!--[if IE 8]><link href="https://assets.digital.cabinet-office.gov.uk/frontend/application-ie8-76ab79c4381c45c614f886802ec6578c.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
-<link href="custom.css" rel="stylesheet" type="text/css">
+<link href="/custom.css" rel="stylesheet" type="text/css">
 </head><body class="mainstream">    <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><div id="skiplink-container">      <div>        <a href="#content" class="skiplink">Skip to main content</a>      </div>    </div>        <!--end global-cookie-message-->    
 <header role="banner" id="global-header" class=""><div class="header-wrapper">
         <div class="header-global">

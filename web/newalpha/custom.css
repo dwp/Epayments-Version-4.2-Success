@@ -1,0 +1,519 @@
+main {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.3157894737;
+  font-weight: 400;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.clear {
+  clear: both;
+}
+
+#content {
+  margin:0!important;
+}
+
+@media (min-width: 769px) {
+  #content {
+    padding-bottom: 30px!important;
+  }
+}
+
+.repayments {
+  width: 100%;
+  float: left;
+}
+
+.repayments ol {
+  padding-left: 2em;
+}
+
+@media screen and (max-width: 700px) {
+  .repayments article header.page-header h1 {
+    font-size: 24px;
+  }
+}
+
+#content strong {
+  font-weight: bold;
+}
+
+.repayments input {
+  margin:30px 0;
+}
+
+.repayments form {
+  margin-left:auto;
+  margin-right:auto;
+  word-break: break-word;
+}
+
+.repayments form br:first-child {
+  display: none;
+}
+
+.repayments.form input, .repayments.form select {
+  margin:15px 0;
+}
+
+.repayments.form input[type="text"], .repayments.form input[type="email"] {
+  width:150px;
+}
+
+
+.repayments.form select {
+    max-width: 150px;
+  }
+
+.repayments.form label {
+  padding-right: 15px;
+  float: left;
+  word-break: initial;
+} 
+
+@media screen and (min-width: 500px) {
+  .repayments.form input[type="text"], .repayments.form input[type="email"] {
+    min-width:270px;
+  }
+  .repayments.form select {
+    max-width: 100%;
+  }
+  .repayments.form label {
+    padding-right: 20px;
+  }
+}
+
+.repayments.form input#cardCVV {
+  width: 33%!important;
+  min-width: 0;
+}
+
+.repayments.form tr td:before, .repayments.form tr td:after {
+  visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+}
+
+.repayments label.form-label + input, .repayments input.text {
+  margin-top: 0;
+}
+
+.repayments.form span {
+  padding:15px 0;
+  float: left;
+}
+
+.repayments.form label[for="op-PMMakePayment"] {
+  padding:15px 20px;
+  background-color: #00823b;
+  position: relative;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.3em 0.6em 0.2em 0.6em;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0 2px 0 #003518;
+  -moz-box-shadow: 0 2px 0 #003518;
+  box-shadow: 0 2px 0 #003518;
+  font-size: 1em;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: #fff;
+  margin: 0 15px 15px 0;
+  padding: 0.52632em 0.78947em 0.26316em 0.78947em;
+  vertical-align: top;
+  text-align: center;
+  width: 100%;
+  float: none;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 200px;
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .repayments.form label[for="op-PMMakePayment"] {
+    width:auto;
+    float: left;
+  }
+}
+.repayments.form label[for="op-PMMakePayment"] span {
+  float: none;
+}
+
+.repayments.form label[for="op-PMMakePayment"]:hover, .repayments.form label[for="op-PMMakePayment"]:focus {
+  background-color: #00692f;
+}
+
+.repayments.form label[for="op-PMMakePayment"] input {
+  display: none;
+}
+
+.repayments.form label[for="op-PMMakePayment"] span b {
+  color: #fff;
+}
+
+.repayments.form input[type="email"] {
+  font-family: "nta",Arial,sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  border: 1px solid #bbb;
+  padding: 0.25em;
+}
+
+.repayments .form-steps ul, .repayments .form-steps li {
+  margin:0;
+  list-style: none;
+  padding-left:0;
+}
+
+.repayments .helper-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+    .repayments .helper-mobile {
+        display: block;
+        border-bottom: 1px solid #bfc1c3
+    }
+}
+.repayments .helper-mobile a {
+    display: block;
+    background-image: url("mobile-nav.png");
+    background-position: right 22px;
+    background-repeat: no-repeat;
+    font-size: 17px;
+    color: #2e3191;
+    text-decoration: none;
+    font-weight: 300;
+    padding: 1em 0;
+    line-height: 1em;
+    cursor: pointer
+}
+.repayments .helper-mobile a.open-helper {
+    background-position: right -25px
+}
+
+.repayments article {
+  background: #fff;
+  position: relative;
+  float: right;
+  width: 68%;
+}
+
+@media screen and (max-width: 700px) {
+    .repayments article {
+        float: none;
+        width: auto;
+    }
+}
+.repayments article.eligible .validation-summary {
+    margin-left: 0
+}
+.repayments article.error-statement p {
+    margin: 2em 0 0 0
+}
+.repayments article.multi-language p {
+    margin-top: 1em
+}
+.repayments article.multi-language h2 {
+    margin-top: 2em
+}
+.repayments article h1 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2em
+}
+@media screen and (max-width: 700px) {
+    .repayments article h1 {
+        font-size: 24px
+    }
+}
+
+.repayments .left-col {
+    float: left;
+    width: 26%;
+}
+@media screen and (max-width: 700px) {
+    .repayments .left-col {
+        float: none;
+        width: auto;
+        margin-top: 2em;
+        border-bottom: 1px solid #bfc1c3;
+        padding-bottom: 2em;
+        display: none
+    }
+}
+@media screen and (min-width: 700px) {
+    .repayments .left-col {
+        display: block !important
+    }
+}
+.repayments .left-col h1 {
+    color: #ccc;
+    font-size: 30px;
+    margin-bottom: 1em
+}
+.repayments .left-col h2 {
+    font-size: 24px
+}
+@media screen and (max-width: 700px) {
+    .repayments .left-col h2 {
+        font-size: 19px
+    }
+}
+.repayments .left-col h3 {
+    margin: 2.2em 0 .5em 0;
+    font-size: 19px
+}
+.repayments .left-col a {
+    display: inline-block
+}
+.repayments .left-col p {
+    margin: .75em 0 0 0
+}
+.repayments .left-col p.grouped {
+    margin-top: 0
+}
+.repayments .left-col ul {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+.repayments .left-col ul li {
+    margin: 10px 0 0 0
+}
+.repayments .left-col.no-employment {
+    float: right;
+    width: 68%;
+    clear: both;
+    margin-top: 2em;
+    display: block
+}
+.repayments .left-col.no-employment li,
+.repayments .left-col.no-employment p {
+    font-size: 19px
+}
+.repayments .left-col.no-employment li {
+    list-style: disc;
+    margin-left: 1.2em
+}
+@media screen and (max-width: 700px) {
+    .repayments .left-col.no-employment {
+        float: none;
+        width: auto;
+        padding-top: 2em;
+        margin-top: 2em
+    }
+}
+
+.phase-banner-alpha {
+  padding: 10px 0 8px 0;
+  border-bottom: 1px solid #bfc1c3; }
+  @media (min-width: 641px) {
+    .phase-banner-alpha {
+      padding-bottom: 10px; } }
+  .phase-banner-alpha p {
+    margin: 0;
+    color: #000;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 400;
+    text-transform: none; }
+    @media (max-width: 640px) {
+      .phase-banner-alpha p {
+        font-size: 14px;
+        line-height: 1.1428571429; } }
+  .phase-banner-alpha .phase-tag {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 8px 0 0;
+    padding: 2px 5px 0;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 700;
+    text-transform: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #d53880; }
+    @media (min-width: 641px) {
+      .phase-banner-alpha .phase-tag {
+        vertical-align: baseline; } }
+    @media (max-width: 640px) {
+      .phase-banner-alpha .phase-tag {
+        font-size: 14px;
+        line-height: 1.1428571429; } }
+  .phase-banner-alpha span {
+    display: -moz-inline-stack;
+    display: inline-block;
+    width: 75%;
+    vertical-align: top; }
+    @media (min-width: 641px) {
+      .phase-banner-alpha span {
+        width: auto;
+        vertical-align: baseline; } }
+
+.phase-banner-beta {
+  padding: 10px 0 8px 0;
+  border-bottom: 1px solid #bfc1c3; }
+  @media (min-width: 641px) {
+    .phase-banner-beta {
+      padding-bottom: 10px; } }
+  .phase-banner-beta p {
+    margin: 0;
+    color: #000;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 400;
+    text-transform: none; }
+    @media (max-width: 640px) {
+      .phase-banner-beta p {
+        font-size: 14px;
+        line-height: 1.1428571429; } }
+  .phase-banner-beta .phase-tag {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 8px 0 0;
+    padding: 2px 5px 0;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 700;
+    text-transform: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #f47738; }
+    @media (min-width: 641px) {
+      .phase-banner-beta .phase-tag {
+        vertical-align: baseline; } }
+    @media (max-width: 640px) {
+      .phase-banner-beta .phase-tag {
+        font-size: 14px;
+        line-height: 1.1428571429; } }
+  .phase-banner-beta span {
+    display: -moz-inline-stack;
+    display: inline-block;
+    width: 75%;
+    vertical-align: top; }
+    @media (min-width: 641px) {
+      .phase-banner-beta span {
+        width: auto;
+        vertical-align: baseline; } }
+
+form input[type="text"] {
+  margin-left: 0;
+}
+
+.panel-indent {
+  clear: both;
+  border-left: 4px solid #bfc1c3;
+  padding: 10px 0 10px 15px;
+  margin: 1em 0.5em!important;
+}
+
+.panel-indent p {
+  margin-top: 0;
+}
+
+@media (min-width: 641px) {
+  #content.multi-page aside {
+    margin: 0 0 2.5em;
+  }
+  .panel-indent {
+    margin: 30px 15px 30px 0!important;
+  }
+}
+
+#content.multi-page aside {
+  z-index: 10;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  overflow: hidden;
+}
+
+@media (min-width: 641px) {
+  #content.multi-page aside {
+    border-bottom: 1px solid #bbb;
+  }
+}
+
+.complete tr, .complete tr td {
+  border:0;
+  font-size: 19px;
+}
+
+aside .page-navigation-open {
+  margin-top: 10px;
+}
+
+@media (max-width: 640px) {
+  aside .page-navigation li.active {
+    padding: 0em 1em 0.75em 0.5em;
+  }
+}
+
+#global-header .header-proposition {
+  padding-top: 0;
+  padding-left: 15px;
+}
+
+#global-header .header-proposition #proposition-name {
+  display: inline-block;
+  margin-top: 7px;
+}
+
+/* done page */
+.highlighted {
+  background: #28A197;
+  color: #FFF;
+  text-align: center;
+  margin: 2.5em 0 2.5em 0;
+  padding: 1.5em 0 2em 0;
+  font-weight: bold; }
+  .highlighted h1 {
+    margin: 0.5em 0; }
+  .highlighted h2 {
+    margin: 0.5em 0; }
+
+/* declaration */
+.help-notice {
+  width: 100%;
+  float: left;
+  clear: both;
+  padding: 0.1em 0 0.1em 1em;
+  background: url(https://assets.digital.cabinet-office.gov.uk/static/icon-important-187bcc8d8a6d56498c4ac26cadad102d.png) no-repeat scroll 0 0.5em; }
+  .help-notice p {
+    padding: 0 1em 0 2em;
+    font-weight: 600; }
+
+  .poundsign {
+    float: left;
+    font-size: 24px;
+    padding: 3px 7px 0 0;
+  }
+
+  table {
+    overflow-x: auto;
+    display: block;
+  }
