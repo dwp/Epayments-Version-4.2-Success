@@ -196,6 +196,10 @@ ob_start();
             <li><a href="/alpha/Worldpay_HMRC_P1_OLD.php">First stage Worldpay page</a></li>
             <li><a href="/alpha/Worldpay_HMRC_P2_OLD.php">Second stage Worldpay page</a></li>
             <li><a href="/alpha/OverpaymentSuccess_GOV.php">Success page</a></li>
+
+          </ul>
+          <h3 class="heading-medium">Pages for unsuccessful payment</h3>
+          <ul>
             <li><a href="/alpha/Overpayments_unsuccessful_gov.php">Payment unsuccessful</a></li>
             <li><a href="/alpha/OverpaymentsFailure_Gov.php">Payment rejected</a></li>
           </ul>
