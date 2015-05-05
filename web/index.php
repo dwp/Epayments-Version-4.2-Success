@@ -70,7 +70,7 @@ ob_start();
       </div>
     </div>
 
-   
+
     <!--end global-cookie-message-->
 
     <header role="banner" id="global-header" class=""><div class="header-wrapper">
@@ -88,26 +88,26 @@ ob_start();
             </div>
           </div>
         </div>
-        
+
       </div>
-    
+
     </header><!--end header-->
     <div id="user-satisfaction-survey-container" data-survey-url="https://www.surveymonkey.com/s/6HZFSVC"></div>
 
-    
+
     <div id="global-header-bar">
       <div class="inner-block">
         <div class="header-bar"></div>
       </div>
-    </div>	
+    </div>
 
-   
+
     <!--end global-header-bar-->
 
-        
+
 
   <div id="wrapper" class="transaction service">
-      
+
 <main id="content" role="main" class="group">
   <div class="phase-banner-alpha">
     <p>
@@ -117,23 +117,23 @@ ob_start();
   </div>
 
   <div class="repayments">
-  <div class="column-two-thirds">
-   <header class="page-header group">
-  <div>
-     <h1>Benefit debt repayment prototypes</h1>
-  </div>
-  </header>
-
-  <div class="article-container group">
-    
-
-    <div class="content-block">
-      <div class="inner">
-      <div class="content">
-		<div>
       	<?php
       	function output($errorvalue = null) {
-      		echo '<h1>Enter your password to access the prototype</h1>
+      		echo '<div class="column-two-thirds">
+           <header class="page-header group">
+          <div>
+             <h1>Benefit debt repayment prototypes</h1>
+          </div>
+          </header>
+
+          <div class="article-container group">
+
+
+            <div class="content-block">
+              <div class="inner">
+              <div class="content">
+        		<div>
+          <h1>Enter your password to access the prototype</h1>
 			<form method="post" action="'.($_SERVER['PHP_SELF']).'">
 				<div class="form-group'.((isset($errorvalue))?' error':'').'">
 					<label class="form-label" for="psw">
@@ -146,20 +146,60 @@ ob_start();
 					<button type="submit" class="button">Continue</button>
 				</div>
 			</form>
+      </div>
+      	</div>
+            </div>
+          </div>
+
+        </div>
+
+        </div>
 		';
 
       	}
 
       	function accessOutput() {
-      		echo'
+      		echo'<div class="column-two-thirds">
+           <header class="page-header group">
+          <div>
+             <h1>Benefit debt repayment prototypes</h1>
+          </div>
+          </header>
+
+          <div class="article-container group">
+
+
+            <div class="content-block">
+              <div class="inner">
+              <div class="content">
+        		<div>
       <h2 class="heading-medium">Pre-beta</h2>
       <ul>
-        <li><a href="/newcontent/start.php">Content designer changes on Alpha</a></li>
         <li><a href="/alpha/start.php">Alpha (assessment)</a></li>
+        <li><a href="/newcontent/start.php">Content designer changes on Alpha</a></li>
         <li><a href="/newalpha/start.php">Alpha with new world pay styles</a></li>
         <li><a href="/original/Overpayment3.php">Alpha orignal prototype</a></li>
       </ul>
+      </div>
+      	</div>
+            </div>
+          </div>
 
+        </div>
+
+        </div>
+        <div class="column-third">
+          <h2 class="heading-medium">Pages</h2>
+          <ul>
+          	<li><a href="/alpha/start.php">GOV.UK - Overview</a></li>
+            <li><a href="/alpha/Overpayments4.php">Payment details</a></li>
+            <li><a href="/alpha/Worldpay_HMRC_P1_OLD.php">First stage Worldpay page</a></li>
+            <li><a href="/alpha/Worldpay_HMRC_P2_OLD.php">Second stage Worldpay page</a></li>
+            <li><a href="/alpha/OverpaymentSuccess_GOV.php">Success page</a></li>
+            <li><a href="/alpha/Overpayments_unsuccessful_gov.php">Payment unsuccessful</a></li>
+            <li><a href="/alpha/OverpaymentsFailure_Gov.php">Payment rejected</a></li>
+          </ul>
+      	</div>
  			 ';
       	}
 
@@ -192,14 +232,7 @@ else {
 	}
 }
 ?>
-</div>
-	</div>
-      </div>
-    </div>
 
-  </div>
-  	
-  </div>
   </div>
 <!-- end report_a_problem -->
 
@@ -220,7 +253,7 @@ else {
 
 <!-- end related -->
 
-      
+
     </div>
 
 
@@ -242,7 +275,7 @@ else {
                             <a id="butWelsh" title="Cliciwch i weld y safle hwn yn y Gymraeg" href="javascript:__doPostBack('ctl00$butWelsh','')">Welsh</a>
                         </li>
                         <li>
-                            Built by the <a href="https://dvladigital.blog.gov.uk/">Driver &amp; Vehicle Licensing Agency</a> 
+                            Built by the <a href="https://dvladigital.blog.gov.uk/">Driver &amp; Vehicle Licensing Agency</a>
                         </li>
                     </ul>
                     <div class="open-government-licence">

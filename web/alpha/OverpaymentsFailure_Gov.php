@@ -1,3 +1,11 @@
+<?php
+ob_start();
+if(!isset($_COOKIE['accessCookie'])) {
+  header('location: /');
+}
+ob_end_flush();
+
+?>
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="lte-ie8" lang="en"><![endif]--><!--[if gt IE 8]><!--><html lang="en">
 <!--<![endif]--><head>
@@ -45,7 +53,7 @@
       </div>
     </div>
 
-    
+
     <!--end global-cookie-message-->
 
     <header role="banner" id="global-header" class=""><div class="header-wrapper">
@@ -55,16 +63,21 @@
               <img src="https://assets.digital.cabinet-office.gov.uk/static/gov.uk_logotype_crown-c09acb07e4d1d5d558f5a0bc53e9e36d.png" width="35" height="31" alt=""> GOV.UK
             </a>
           </div>
-          
-
+          <div class="header-proposition">
+            <div class="content">
+              <nav id="proposition-menu">
+                <a href="start.htm" id="proposition-name">Benefit debt repayment</a>
+              </nav>
+            </div>
+          </div>
         </div>
-        
+
       </div>
-	  
+
     </header><!--end header-->
-  
+
         <div id="top-links" class="inner-block">
-            
+
         </div>
 <div id="global-header-bar">
       <div class="inner-block">
@@ -72,8 +85,8 @@
       </div>
     </div>
 
-<script type="text/javascript">	
-var v1 = parent.document.URL.substring(parent.document.URL.indexOf('?'), parent.document.URL.length);	
+<script type="text/javascript">
+var v1 = parent.document.URL.substring(parent.document.URL.indexOf('?'), parent.document.URL.length);
 var qsParm = new Array();
 var query = window.location.search.substring(1);
 var parms = query.split('&');
@@ -101,53 +114,52 @@ win.focus();
 
 </script><div id="wrapper" class="transaction service complete">
 <main id="content" role="main" class="group">
- <div class="phase-banner-alpha">
-    <p>
-      <strong class="phase-tag">ALPHA</strong>
-      <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
-    </p>
-  </div>
+  <div class="phase-banner-alpha">
+     <p>
+       <strong class="phase-tag">ALPHA</strong>
+       <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+     </p>
+   </div>
   <div>
    <header class="page-header group"><div>
-
-  <h1>Payment unsuccessful</h1>
+  <h1>Payment rejected</h1>
   <!-- <h1>Repay an Overpayment</h1>-->
   <!--&nbsp;&nbsp;<p style="font-size:35px"> <Strong>Make a Benefit Overpayment Online</Strong></p>-->
-
-  </div>
+    </div>
   </header>
 
-<div>
-   <table border="0">
-  <tr><td> <h3>Your Payment was declined by your card issuer.Please contact them for more details. </h3></td></tr>
+   <ul>
+ </ul><table border="0">
+  <tbody><tr><td> <h3>Your Payment was rejected by our online payment system. </h3></td></tr>
    <tr><td> &nbsp;&nbsp;&nbsp; </td> </tr>
-  <tr><td>  <font size="4">The payment was not taken from your account.</font></td> </tr>
-  
-<tr><td> &nbsp;&nbsp;&nbsp; </td> </tr>
- <tr><td> <font size="4">Make a new  <a href="./Overpayment3.htm" title="contact us" id="logo" class="content">online payment.</td></tr>
- <tr><td> &nbsp;&nbsp;&nbsp; </td> </tr>
- 
+  <tr><td> <h2><b> What happens next?</b></h2></td> </tr>
 
-  
-</table>
+<tr><td> <li><font size="4">Make a new <a href="./Overpayment3.htm" title="contact us" id="logo" class="content"> online payment</a></font></li></td></tr>
+ <tr><td>  <li><font size="4">Make a payment by phone calling 0345 345 900</font></li>
+
+  </td></tr><tr><td> <h3>&nbsp;&nbsp;&nbsp; Alternatively <a href="./HowtoMakeOverpayment.html" title="contact us" id="logo" class="content">please check other ways to pay. </a></h3></td></tr>
+</tbody></table>
   </div>
-  <br/>
+  <br>
 
- 
+
+
   <div>
     <table width="0" align="center">
-     <tr>
-    <form action="./Overpayments_welcome.htm" method="post" autocomplete="off" novalidate="novalidate">
-        <td class="get-started group"><input type="submit" name="return" id="return" value="Return to GOV.UK"   class="button" /></td></tr>
-     <tr> <td>&nbsp; &nbsp;&nbsp;&nbsp;</td></tr>
-      </form>
-      </table>
+     <tbody><tr>
+    <form action="./Overpayments_welcome.htm" method="post" autocomplete="off" novalidate="novalidate"></form>
+        <td class="get-started group"><input type="submit" name="return" id="return" value="Return to GOV.UK" class="button"></td></tr>
+    <tr>
+      <td>&nbsp; &nbsp;&nbsp;&nbsp;</td>
+      </tr>
+
+      </tbody></table>
     </div>
 
  </main>
  </div>
   <br/>
-  <br/>   
+  <br/>
     <footer class="group js-footer" id="footer" role="contentinfo">
                 <div class="footer-wrapper">
                     <div class="footer-meta">
@@ -166,7 +178,7 @@ win.focus();
                                     <a id="butWelsh" title="Cliciwch i weld y safle hwn yn y Gymraeg" href="javascript:__doPostBack('ctl00$butWelsh','')">Welsh</a>
                                 </li>
                                 <li>
-                                    Built by the <a href="https://dvladigital.blog.gov.uk/">Driver &amp; Vehicle Licensing Agency</a> 
+                                    Built by the <a href="https://dvladigital.blog.gov.uk/">Driver &amp; Vehicle Licensing Agency</a>
                                 </li>
                             </ul>
                             <div class="open-government-licence">
@@ -227,7 +239,4 @@ GOVUK.Analytics.Format = "transaction";</script><script type="text/javascript">
   })();
 </script><script src="https://assets.digital.cabinet-office.gov.uk/frontend/frontend-3da91097eaed5589a6492d6be5bd1fee.js" type="text/javascript"></script>
 </body>
-</html> 
-	  
-	  
- 
+</html>

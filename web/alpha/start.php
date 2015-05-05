@@ -53,7 +53,7 @@ ob_end_flush();
       </div>
     </div>
 
-    
+
     <!--end global-cookie-message-->
 
     <header role="banner" id="global-header" class=""><div class="header-wrapper">
@@ -73,9 +73,9 @@ ob_end_flush();
   </form>
 
         </div>
-        
+
       </div>
-	  
+
     </header><!--end header-->
     <div id="global-header-bar">
       <div class="inner-block">
@@ -90,14 +90,14 @@ ob_end_flush();
 </ol>
 </div>
         <div id="top-links" class="inner-block">
-            
+
         </div>
-		
-   
+
+
     <!--end global-header-bar-->
 
   <div id="wrapper" class="programme">
-<div class="grid-row">      
+<div class="grid-row">
 <main id="content" role="main" class="multi-page">
 
  <article>
@@ -108,11 +108,11 @@ ob_end_flush();
   </header>
 
   <div class="article-container group">
-    
+
 
     <div class="content-block">
       <div class="inner">
-        
+
   <aside>
   <div class="inner">
 
@@ -177,12 +177,12 @@ ob_end_flush();
   <li class="previous">
             <a href="#" rel="prev" title="Navigate to previous part">
               <span class="pagination-label">Previous </span> <span class="pagination-part-title">When repayments have to be made</span>
-          </a>          
+          </a>
 </li>
       <li class="next">
         <a href="#" rel="next" title="Navigate to next part">
           <span class="pagination-label">Next</span> <span class="pagination-part-title">Make repayment?</span>
-      </a>          
+      </a>
       </li>
     </ul>
     </nav></footer><div class="print-link"><a href="/carers-allowance/print" rel="nofollow" target="_blank">Print entire guide</a></div>
@@ -204,53 +204,53 @@ ob_end_flush();
 <div class="related-container">
 
     <div class="related" id="related">
-      
-        
+
+
         <div class="inner group related-subsection">
-          
+
           <h2 id="parent-subsection">Benefits entitlement</h2>
-          
+
 
           <nav role="navigation" aria-labelledby="parent-subsection"><ul>
 <li>
                   <a href="/benefits-calculators">Benefits calculators</a>
                 </li>
-              
+
                 <li>
                   <a href="/employment-support-allowance">Employment and Support Allowance (ESA)</a>
                 </li>
-              
+
                 <li>
                   <a href="/how-to-have-your-benefits-paid">How and when your benefits are paid</a>
                 </li>
-              
-              
+
+
                 <li class="related-topic"><a href="/browse/benefits/entitlement" title="More in Benefits entitlement">More <span class="visuallyhidden">in Benefits entitlement</span></a></li>
-              
+
             </ul></nav>
 </div>
-      
-        
+
+
         <div class="inner group related-other">
-          
+
           <h2 id="parent-other">Elsewhere on GOV.UK</h2>
-          
+
 
           <nav role="navigation" aria-labelledby="parent-other"><ul>
 <li>
                   <a href="/jobsearch">Find a job with Universal Jobmatch</a>
                 </li>
-              
+
                 <li>
                   <a href="/contact-jobcentre-plus">Contact Jobcentre Plus</a>
                 </li>
-              
-              
+
+
             </ul></nav>
 </div>
-      
 
-      
+
+
 
       <div class="inner group">
         <a class="return-to-top" href="#content">Return to top ↑</a>
@@ -275,7 +275,7 @@ ob_end_flush();
 
 <!-- end related -->
 
-      
+
     </div>
 
 

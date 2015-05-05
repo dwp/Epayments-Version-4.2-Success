@@ -138,7 +138,7 @@ img.printonly {display:none;}
           <div class="header-proposition">
             <div class="content">
               <nav id="proposition-menu">
-                <a href="start.htm" id="proposition-name">Benefit Debt Repayment</a>
+                <a href="start.htm" id="proposition-name">Benefit debt repayment</a>
               </nav>
             </div>
           </div>
