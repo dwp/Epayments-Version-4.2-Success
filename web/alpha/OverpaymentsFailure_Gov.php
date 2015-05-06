@@ -123,19 +123,16 @@ win.focus();
   <div>
    <header class="page-header group"><div>
   <h1>Payment rejected</h1>
-  <!-- <h1>Repay an Overpayment</h1>-->
-  <!--&nbsp;&nbsp;<p style="font-size:35px"> <Strong>Make a Benefit Overpayment Online</Strong></p>-->
-    </div>
-  </header>
+  </header></div>
   <h3>Your payment was rejected by our online payment system.</h3>
-   <p><font size="4">No money has been taken from your account.</p>
+   <p>No money has been taken from your account.</p>
    <h2>What happens next?</h2>
    <ul>
-  <li><font size="4">You can <a href="Overpayments4.php" class="content">reattempt another online payment</a></font></li>
-<li><font size="4">Make a payment by phone calling 0345 345 900</font></li>
+  <li>You can <a href="Overpayments4.php" class="content">reattempt another online payment</a></li>
+<li>Make a payment by phone calling 0345 345 900</li>
 </ul>
 
-  <p>Alternatively <a href="./HowtoMakeOverpayment.html" title="contact us" id="logo" class="content">please check other ways to pay. </p>
+  <p>Alternatively <a href="HowtoMakeOverpayment.php" title="contact us" id="logo" class="content">please check other ways to pay. </p>
 
   </div>
   <br>
