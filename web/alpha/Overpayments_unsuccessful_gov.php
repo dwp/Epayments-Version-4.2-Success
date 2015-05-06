@@ -137,7 +137,7 @@ win.focus();
   <tr><td>  <font size="4">No money has been taken from your account.</font></td> </tr>
 
 <tr><td> &nbsp;&nbsp;&nbsp; </td> </tr>
- <tr><td> <font size="4">Reattempt another <a href="Overpayments4.php" title="contact us" id="logo" class="content">online payment.</td></tr>
+<tr><td> <li><font size="4">You can <a href="Overpayments4.php" class="content">reattempt another online payment</a></font></li></td></tr>
  <tr><td> &nbsp;&nbsp;&nbsp; </td> </tr>
 
 
