@@ -70,12 +70,12 @@
     </header><!--end header--><!--end header--><div id="user-satisfaction-survey-container" data-survey-url="https://www.surveymonkey.com/s/6HZFSVC"></div>
 
     
-<div>
-  <p align="center" >
-              <strong style="background-color:#d53880">ALPHA</strong>
-              <span>This is a new service – your feedback will help us to improve it.</span>
-            </p>
-	</div>		
+<div class="phase-banner-alpha">
+     <p>
+       <strong class="phase-tag">ALPHA</strong>
+       <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+     </p>
+   </div>	
 
 
     
@@ -93,12 +93,7 @@
       <div class="grid-row">
         
 <main id="content" role="main" class="multi-page">
-<div class="phase-banner-alpha">
-     <p>
-       <strong class="phase-tag">ALPHA</strong>
-       <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
-     </p>
-   </div>
+
 <header class="page-header"><div>
       <h1>
         
@@ -134,7 +129,7 @@
 	<p>You can repay an overpayment by debit or credit card.</p>
 	<p>You may incur interest charges if you pay by credit card. </p>
 	<p>Only use this service if you are paying in full.</p>
-	<p> Please <a href="./Overpayment3.htm"><b>click here</b></a> to make an online payment.</p>
+	<p> Please <a href="Overpayments4.php"><b>click here</b></a> to make an online payment.</p>
 <br/>
 <h3>Online banking</h3>
 
