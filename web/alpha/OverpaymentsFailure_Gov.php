@@ -130,10 +130,8 @@ win.focus();
    <ul>
   <li>You can <a href="Overpayments4.php" class="content">reattempt another online payment</a></li>
 <li>Make a payment by phone calling 0345 345 900</li>
+<li>Alternatively <a href="HowtoMakeOverpayment.php" class="content">please check other ways to pay.</a></li>
 </ul>
-
-  <p>Alternatively <a href="HowtoMakeOverpayment.php" class="content">please check other ways to pay.</a></p>
-
   <div>
     <input type="submit" name="return" id="return" value="Return to GOV.UK" class="button">
     </div>
