@@ -130,21 +130,15 @@ win.focus();
 
 <div>
  <h3>Your payment was declined by your card issuer, please contact them for more details.</h3>
-  <p>No money has been taken from your account.<br>
-  You can <a href="Overpayments4.php" class="content">reattempt another online payment</a>
-  </p>
+  <p>No money has been taken from your account.</p>
+  <ul class="list-bullet">
+<li>Alternatively <a href="HowtoMakeOverpayment.php" class="content">please check other ways to pay.</a></li>
+</ul>
   </div>
   <br/>
 
 
-  <div>
-    <table width="0" align="center">
-     <tr>
-    <form action="./Overpayments_welcome.htm" method="post" autocomplete="off" novalidate="novalidate">
-        <td class="get-started group"><input type="submit" name="return" id="return" value="Return to GOV.UK"   class="button" /></td></tr>
-     <tr> <td>&nbsp; &nbsp;&nbsp;&nbsp;</td></tr>
-      </form>
-      </table>
+  <div><input type="submit" name="return" id="return" value="Return to GOV.UK"   class="button" />
     </div>
 
  </main>
