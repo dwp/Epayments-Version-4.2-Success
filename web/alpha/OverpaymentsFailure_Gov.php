@@ -127,7 +127,7 @@ win.focus();
   <h3>Your payment was rejected by our online payment system.</h3>
    <p>No money has been taken from your account.</p>
    <h2>What happens next?</h2>
-   <ul>
+   <ul class="list-bullet">
   <li>You can <a href="Overpayments4.php" class="content">reattempt another online payment</a></li>
 <li>Make a payment by phone calling 0345 345 900</li>
 <li>Alternatively <a href="HowtoMakeOverpayment.php" class="content">please check other ways to pay.</a></li>
