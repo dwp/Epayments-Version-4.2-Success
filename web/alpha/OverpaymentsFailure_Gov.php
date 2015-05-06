@@ -127,19 +127,16 @@ win.focus();
   <!--&nbsp;&nbsp;<p style="font-size:35px"> <Strong>Make a Benefit Overpayment Online</Strong></p>-->
     </div>
   </header>
-
+  <h3>Your payment was rejected by our online payment system.</h3>
+   <p><font size="4">No money has been taken from your account.</p>
+   <h2>What happens next?</h2>
    <ul>
- </ul><table border="0">
-  <tbody><tr><td> <h3>Your Payment was rejected by our online payment system. </h3></td></tr>
-   <tr><td> &nbsp;&nbsp;&nbsp; </td> </tr>
-   <tr><td>  <font size="4">No money has been taken from your account.</font></td> </tr>
-  <tr><td> <h2><b> What happens next?</b></h2></td> </tr>
+  <li><font size="4">You can <a href="Overpayments4.php" class="content">reattempt another online payment</a></font></li>
+<li><font size="4">Make a payment by phone calling 0345 345 900</font></li>
+</ul>
 
-<tr><td> <li><font size="4">You can <a href="Overpayments4.php" class="content">reattempt another online payment</a></font></li></td></tr>
- <tr><td>  <li><font size="4">Make a payment by phone calling 0345 345 900</font></li>
+  <p>Alternatively <a href="./HowtoMakeOverpayment.html" title="contact us" id="logo" class="content">please check other ways to pay. </p>
 
-  </td></tr><tr><td> <h3>&nbsp;&nbsp;&nbsp; Alternatively <a href="./HowtoMakeOverpayment.html" title="contact us" id="logo" class="content">please check other ways to pay. </a></h3></td></tr>
-</tbody></table>
   </div>
   <br>
 

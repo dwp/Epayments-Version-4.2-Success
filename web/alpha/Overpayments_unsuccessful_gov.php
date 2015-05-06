@@ -132,7 +132,7 @@ win.focus();
 
 <div>
    <table border="0">
-  <tr><td> <h3>Your Payment was declined by your card issuer. Please contact them for more details.</h3></td></tr>
+  <tr><td> <h3>Your payment was declined by your card issuer. Please contact them for more details.</h3></td></tr>
    <tr><td> &nbsp;&nbsp;&nbsp; </td> </tr>
   <tr><td>  <font size="4">No money has been taken from your account.</font></td> </tr>
 
