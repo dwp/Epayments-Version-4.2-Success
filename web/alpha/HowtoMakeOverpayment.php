@@ -1,4 +1,11 @@
+<?php
+ob_start();
+if(!isset($_COOKIE['accessCookie'])) {
+  header('location: /');
+}
+ob_end_flush();
 
+?>
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="lte-ie8" lang="en"><![endif]--><!--[if gt IE 8]><!--><html lang="en">
 <!--<![endif]--><head>
@@ -70,12 +77,7 @@
     </header><!--end header--><!--end header--><div id="user-satisfaction-survey-container" data-survey-url="https://www.surveymonkey.com/s/6HZFSVC"></div>
 
     
-<div class="phase-banner-alpha">
-     <p>
-       <strong class="phase-tag">ALPHA</strong>
-       <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
-     </p>
-   </div>	
+
 
 
     
@@ -90,6 +92,12 @@
 </div>
 
   <div id="wrapper" class="guide guide">
+  <div class="phase-banner-alpha">
+     <p>
+       <strong class="phase-tag">ALPHA</strong>
+       <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+     </p>
+   </div>	
       <div class="grid-row">
         
 <main id="content" role="main" class="multi-page">
