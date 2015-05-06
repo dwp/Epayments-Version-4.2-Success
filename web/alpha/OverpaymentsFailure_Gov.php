@@ -122,7 +122,7 @@ win.focus();
    </div>
   <div>
    <header class="page-header group">
-  <h1>Payment rejected</h1>
+  <div><h1>Payment rejected</h1></div>
   </header></div>
   <h3>Your payment was rejected by our online payment system.</h3>
    <p>No money has been taken from your account.</p>
