@@ -124,25 +124,15 @@ win.focus();
    <header class="page-header group"><div>
 
   <h1>Payment declined</h1>
-  <!-- <h1>Repay an Overpayment</h1>-->
-  <!--&nbsp;&nbsp;<p style="font-size:35px"> <Strong>Make a Benefit Overpayment Online</Strong></p>-->
 
   </div>
   </header>
 
 <div>
-   <table border="0">
-  <tr><td> <h3>Your payment was declined by your card issuer. Please contact them for more details.</h3></td></tr>
-   <tr><td> &nbsp;&nbsp;&nbsp; </td> </tr>
-  <tr><td>  <font size="4">No money has been taken from your account.</font></td> </tr>
-
-<tr><td> &nbsp;&nbsp;&nbsp; </td> </tr>
-<tr><td> <li><font size="4">You can <a href="Overpayments4.php" class="content">reattempt another online payment</a></font></li></td></tr>
- <tr><td> &nbsp;&nbsp;&nbsp; </td> </tr>
-
-
-
-</table>
+ <h3>Your payment was declined by your card issuer. Please contact them for more details.</h3>
+  <p>No money has been taken from your account.<br>
+  You can <a href="Overpayments4.php" class="content">reattempt another online payment</a>
+  </p>
   </div>
   <br/>
 
