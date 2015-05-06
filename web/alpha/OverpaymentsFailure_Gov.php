@@ -121,7 +121,7 @@ win.focus();
      </p>
    </div>
   <div>
-   <header class="page-header group"><div>
+   <header class="page-header group">
   <h1>Payment rejected</h1>
   </header></div>
   <h3>Your payment was rejected by our online payment system.</h3>
@@ -132,23 +132,10 @@ win.focus();
 <li>Make a payment by phone calling 0345 345 900</li>
 </ul>
 
-  <p>Alternatively <a href="HowtoMakeOverpayment.php" title="contact us" id="logo" class="content">please check other ways to pay. </p>
-
-  </div>
-  <br>
-
-
+  <p>Alternatively <a href="HowtoMakeOverpayment.php" class="content">please check other ways to pay.</a></p>
 
   <div>
-    <table width="0" align="center">
-     <tbody><tr>
-    <form action="./Overpayments_welcome.htm" method="post" autocomplete="off" novalidate="novalidate"></form>
-        <td class="get-started group"><input type="submit" name="return" id="return" value="Return to GOV.UK" class="button"></td></tr>
-    <tr>
-      <td>&nbsp; &nbsp;&nbsp;&nbsp;</td>
-      </tr>
-
-      </tbody></table>
+    <input type="submit" name="return" id="return" value="Return to GOV.UK" class="button">
     </div>
 
  </main>
