@@ -129,7 +129,7 @@ win.focus();
   </header>
 
 <div>
- <h3>Your payment was declined by your card issuer. Please contact them for more details.</h3>
+ <h3>Your payment was declined by your card issuer, please contact them for more details.</h3>
   <p>No money has been taken from your account.<br>
   You can <a href="Overpayments4.php" class="content">reattempt another online payment</a>
   </p>
